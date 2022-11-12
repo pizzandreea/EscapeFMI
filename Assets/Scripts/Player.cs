@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     private Vector3 moveDelta;
 
+    private float movementSpeed = 2.0f;
+
     private RaycastHit2D hit;
 
     // Start is called before the first frame update
@@ -35,19 +37,36 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
 
         // Make sure nothing is blocking
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Humans", "Blocking"));
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(movementSpeed * moveDelta.y * Time.deltaTime), LayerMask.GetMask("Humans", "Blocking"));
         if (hit.collider == null)
         {
-            transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
+            transform.Translate(0, movementSpeed * moveDelta.y * Time.deltaTime, 0);
         }
 
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Humans", "Blocking"));
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(movementSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("Humans", "Blocking"));
         if (hit.collider == null)
         {
-            transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
+            transform.Translate(movementSpeed * moveDelta.x * Time.deltaTime, 0, 0);
         }
-
-        // Moving
-
     }
+
+
+    // Moving
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            movementSpeed = 3.0f;
+        }
+        else if(Input.GetKey(KeyCode.LeftControl))
+        {
+            movementSpeed = 1.0f;
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            movementSpeed = 2.0f;
+        }
+    }
+
+
 }
