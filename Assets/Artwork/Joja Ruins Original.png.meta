@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LeftShadow
+      name: ShadowLeft1
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 71
-        height: 63
+        y: 46
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,13 +126,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RightShadow
+      name: Shadow
       rect:
         serializedVersion: 2
-        x: 81
-        y: 0
-        width: 61
-        height: 62
+        x: 16
+        y: 30
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,6 +230,258 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ShadowLeft2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 46
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74efca46fe1dd0468abcdfce2aca440
+      internalID: -293717942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowLeft3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 46
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba55e18aea2a7d40a370411abaf3618
+      internalID: 307726070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowLeft4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a78c6cdda8bf446a5233cb3536a3b2
+      internalID: 1968515321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowLeft5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677d07a96b426b64eacc4095bc9fcf10
+      internalID: -313119611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowLeft6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 5
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3de62872e12e8e4aa9df558c849696a
+      internalID: -1050868549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowRight1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 46
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7af3f39b55cee7449fda893efbb4fff
+      internalID: -2080484610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowRight2
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f194e897701ffaf46bffda7109a1d1dc
+      internalID: 317905562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowRight3
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 14
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1899bd0d845e44a8b4f2a7a648b413
+      internalID: -1490562293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowRight4
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 14
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5ed9e4df8e3454ab375ec6f902e5f1
+      internalID: 1581322623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowRight5
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f731e2a46859742ac4bff25fdbd5be
+      internalID: 808057448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowUp1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338289037912ce6429710d8403d8c328
+      internalID: 837869530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShadowUp2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 39
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996316d4cb88c614999a06647cbdf41c
+      internalID: 2126108747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -241,12 +493,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      ShadowRight2: 317905562
       Rocksss: 466108043
       PileRocks: -1783661909
-      LeftShadow: -1764863842
-      RightShadow: 1073834748
+      Shadow: -1764863842
+      ShadowLeft1: 307726070
+      ShadowLeft2: 1968515321
+      ShadowRight5: 808057448
       Shelf: 469622163
+      ShadowLeft3: -313119611
+      ShadowLeft5: -1050868549
+      ShadowLeft6: -1050868549
+      ShadowLeft4: -1050868549
+      ShadowRight3: -1490562293
+      ShadowRight4: 1581322623
       Rockss: 400792251
+      ShadowUp1: 837869530
+      ShadowUp2: 2126108747
+      ShadowRight1: -293717942
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
