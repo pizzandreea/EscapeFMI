@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dee3e3899e2581b48b444afda60c6779
+guid: 11683c2c41bb0fb428e12da89314f3ab
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -105,11 +105,53 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Floor-1_1
+      name: Stair1
       rect:
         serializedVersion: 2
-        x: 272
-        y: 576
+        x: 80
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce181cdc0e4253145a6c24e22d821f02
+      internalID: 333032039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stair2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d04d334c934fb45b5552ac4fa855f4
+      internalID: 178828954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -119,18 +161,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8b0971ff286d0a488463d64fc6bce15
-      internalID: -1548431358
+      spriteID: cccf02c04ecc9a3428539efc9eb2c9c8
+      internalID: -482865669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor-1_2
+      name: Pillar2
       rect:
         serializedVersion: 2
-        x: 288
-        y: 576
+        x: 64
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -140,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51d52093a0dcf494aa179b0821333bac
-      internalID: 1226575843
+      spriteID: 1ca5e378fa374f24c8320b7e11773e4f
+      internalID: -1056571537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC
+      name: Pillar3
       rect:
         serializedVersion: 2
-        x: 305
-        y: 512
-        width: 15
-        height: 25
+        x: 48
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8084739748c02a148b44d3fa490974a5
-      internalID: -219093280
+      spriteID: 2926d12bfd3e94047bedcfa5bad47268
+      internalID: 128571365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mouse
+      name: Pillar
       rect:
         serializedVersion: 2
-        x: 320
-        y: 512
-        width: 6
-        height: 13
+        x: 64
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +224,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a6ca4ea4b3bd2a47afbe90ba2259b0a
-      internalID: 775805648
+      spriteID: 78fdfe137607c5e45b3c52b6a39cf036
+      internalID: -191278625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e29e8d41a8a364f9b5e90196070a3d
+      internalID: -764487727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210b258e7c2c3064594745cd64a3f4f1
+      internalID: 682950378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6493cf949efd96b468e61ca7f30f748d
+      internalID: 1732652454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e2f7e9e4838a746831fe3400a4e711
+      internalID: 1658784712
       vertices: []
       indices: 
       edges: []
@@ -199,10 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mouse: 775805648
-      PC: -219093280
-      Floor-1_2: 1226575843
-      Floor-1_1: -1548431358
+      Pillar5: -764487727
+      Pillar6: 682950378
+      Stair1: 333032039
+      Stair2: 178828954
+      Pillar1: -482865669
+      Pillar7: 1732652454
+      Pillar3: 128571365
+      Pillar: -191278625
+      Pillar8: 1658784712
+      Pillar2: -1056571537
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

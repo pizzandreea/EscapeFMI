@@ -840,12 +840,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rock10
+      name: Rockk1
       rect:
         serializedVersion: 2
-        x: 54
-        y: 85
-        width: 15
+        x: 53
+        y: 76
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1322,6 +1322,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Rockk2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 92
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d425a932c97f01e4798451b99d6edeb5
+      internalID: 1082301943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1338,7 +1359,7 @@ TextureImporter:
       TopWall4: 583697187
       Box2: -1957387388
       Floor_1_8: 1351619425
-      Rock10: -1269464490
+      Rockk2: 1082301943
       Box2_1: -680183023
       Floor-1_4: -1296400444
       Rock8: -1482715617
@@ -1352,6 +1373,7 @@ TextureImporter:
       Box2_2: -241866847
       SideShelf7: -767482379
       Floor-1_6: -1712075433
+      Rockk1: -1269464490
       Rock1: 1675268376
       SideShelf5: 1959901175
       TopWall3: -1402893947
