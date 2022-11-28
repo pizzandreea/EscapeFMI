@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Proximity : MonoBehaviour
@@ -6,7 +7,8 @@ public class Proximity : MonoBehaviour
     public ContactFilter2D filter;
 
     private CircleCollider2D _proximityCollider2D;
-    private readonly Collider2D[] _collisionHits = new Collider2D[25];
+    private readonly List<Collider2D> _proximityHits = new();
+    private readonly HashSet<Collider2D> _inProximity = new();
 
     protected virtual void Start()
     {
@@ -15,28 +17,62 @@ public class Proximity : MonoBehaviour
 
     protected virtual void Update()
     {
-        _proximityCollider2D.OverlapCollider(filter, _collisionHits);
+        _proximityCollider2D.OverlapCollider(filter, _proximityHits);
 
-        for (var i = 0; i < _collisionHits.Length; i++)
+        CheckObjectsAlreadyInProximity();
+        CheckForNewObjectsInProximity();
+        
+        // Clean up the list, as it doesn't get cleaned up automatically
+        _proximityHits.Clear();
+    }
+
+    private void CheckObjectsAlreadyInProximity()
+    {
+        var leftProximity = new HashSet<Collider2D>();
+
+        foreach (var collider in _inProximity)
         {
-            if (_collisionHits[i] == null)
+            if (!_proximityHits.Contains(collider))
+            {
+                leftProximity.Add(collider);
+            }
+        }
+
+        foreach (var collider in leftProximity)
+        {
+            OnLeaveProximity(collider);
+            _inProximity.Remove(collider);
+        }
+    }
+
+    private void CheckForNewObjectsInProximity()
+    {
+        foreach (var collider in _proximityHits)
+        {
+            // Don't self-intersect with other colliders on the same entity
+            if (collider.transform.GetInstanceID() == transform.GetInstanceID())
+            {
+                continue;
+            }
+            
+            // Ignore objects already in proximity
+            if (_inProximity.Contains(collider))
             {
                 continue;
             }
 
-            // Don't self-intersect with other colliders on the same entity
-            if (_collisionHits[i].transform.GetInstanceID() != transform.GetInstanceID())
-            {
-                OnProximity(_collisionHits[i]);
-            }
-
-            // Clean up the array, as it doesn't get cleaned up automatically
-            _collisionHits[i] = null;
+            OnEnterProximity(collider);
+            _inProximity.Add(collider);
         }
     }
 
-    protected virtual void OnProximity(Collider2D collider)
+    protected virtual void OnEnterProximity(Collider2D collider)
     {
-        Debug.Log("OnProximity() isn't implemented in " + name);
+        Debug.Log("OnEnterProximity() isn't implemented in " + name);
+    }
+
+    protected virtual void OnLeaveProximity(Collider2D collider)
+    {
+        Debug.Log("OnLeaveProximity() isn't implemented in " + name);
     }
 }
