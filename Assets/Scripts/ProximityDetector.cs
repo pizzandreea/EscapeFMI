@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Proximity : MonoBehaviour
+public class ProximityDetector : MonoBehaviour
 {
     public ContactFilter2D filter;
+    public UnityEvent<Collider2D> onEnterProximity;
+    public UnityEvent<Collider2D> onLeaveProximity;
 
     private CircleCollider2D _proximityCollider2D;
     private readonly List<Collider2D> _proximityHits = new();
@@ -39,7 +42,7 @@ public class Proximity : MonoBehaviour
 
         foreach (var collider in leftProximity)
         {
-            OnLeaveProximity(collider);
+            onLeaveProximity.Invoke(collider);
             _inProximity.Remove(collider);
         }
     }
@@ -60,18 +63,8 @@ public class Proximity : MonoBehaviour
                 continue;
             }
 
-            OnEnterProximity(collider);
+            onEnterProximity.Invoke(collider);
             _inProximity.Add(collider);
         }
-    }
-
-    protected virtual void OnEnterProximity(Collider2D collider)
-    {
-        Debug.Log("OnEnterProximity() isn't implemented in " + name);
-    }
-
-    protected virtual void OnLeaveProximity(Collider2D collider)
-    {
-        Debug.Log("OnLeaveProximity() isn't implemented in " + name);
     }
 }

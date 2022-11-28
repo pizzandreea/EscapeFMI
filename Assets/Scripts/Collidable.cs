@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Collidable : MonoBehaviour
 {
     public ContactFilter2D filter;
+    public UnityEvent<Collider2D> onCollide;
 
     private BoxCollider2D _boxCollider;
     private readonly List<Collider2D> _collisionHits = new();
@@ -25,15 +27,10 @@ public class Collidable : MonoBehaviour
                 continue;
             }
 
-            OnCollide(collider);
+            onCollide.Invoke(collider);
         }
 
         // Clean up the list, as it doesn't get cleaned up automatically
         _collisionHits.Clear();
-    }
-
-    protected virtual void OnCollide(Collider2D collider)
-    {
-        Debug.Log("OnCollide() isn't implemented in " + name);
     }
 }
