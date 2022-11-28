@@ -23,6 +23,12 @@ public class Collidable : MonoBehaviour
             {
                 continue;
             }
+            
+            // Don't self-intersect with other colliders on the same entity
+            if (_collisionHits[i].transform.GetInstanceID() == transform.GetInstanceID())
+            {
+                continue;
+            }
 
             OnCollide(_collisionHits[i]);
 
