@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,7 +20,7 @@ public class Proximity : MonoBehaviour
 
         CheckObjectsAlreadyInProximity();
         CheckForNewObjectsInProximity();
-        
+
         // Clean up the list, as it doesn't get cleaned up automatically
         _proximityHits.Clear();
     }
@@ -54,7 +53,7 @@ public class Proximity : MonoBehaviour
             {
                 continue;
             }
-            
+
             // Ignore objects already in proximity
             if (_inProximity.Contains(collider))
             {

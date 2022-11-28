@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Collidable : MonoBehaviour
@@ -6,7 +6,7 @@ public class Collidable : MonoBehaviour
     public ContactFilter2D filter;
 
     private BoxCollider2D _boxCollider;
-    private readonly Collider2D[] _collisionHits = new Collider2D[25];
+    private readonly List<Collider2D> _collisionHits = new();
 
     protected virtual void Start()
     {
@@ -17,24 +17,19 @@ public class Collidable : MonoBehaviour
     {
         _boxCollider.OverlapCollider(filter, _collisionHits);
 
-        for (var i = 0; i < _collisionHits.Length; i++)
+        foreach (var collider in _collisionHits)
         {
-            if (_collisionHits[i] == null)
-            {
-                continue;
-            }
-            
             // Don't self-intersect with other colliders on the same entity
-            if (_collisionHits[i].transform.GetInstanceID() == transform.GetInstanceID())
+            if (collider.transform.GetInstanceID() == transform.GetInstanceID())
             {
                 continue;
             }
 
-            OnCollide(_collisionHits[i]);
-
-            // Clean up the array, as it doesn't get cleaned up automatically
-            _collisionHits[i] = null;
+            OnCollide(collider);
         }
+
+        // Clean up the list, as it doesn't get cleaned up automatically
+        _collisionHits.Clear();
     }
 
     protected virtual void OnCollide(Collider2D collider)
