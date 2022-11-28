@@ -11,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
+  - 
+  - Floor1
   - Blocking
-  - Humans
-  - 
-  - 
+  - Actor
   - 
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Humans
-    uniqueID: 263849241
+  - name: Floor
+    uniqueID: 4174662847
+    locked: 0
+  - name: Actor
+    uniqueID: 1197640299
     locked: 0
