@@ -9,3 +9,6 @@
 - [Bogdan Strat](https://github.com/Bogdan-Strat)
 - [Luca Trușcă](https://github.com/Luca1152)
 - [Alexandru Zugravu](https://github.com/Zugravu)
+
+## Sprint reports
+The reports for each sprint are available [here](https://drive.google.com/drive/folders/1EKANTkPCiKqi7BpH_49YsuhyMR8zIsKC?usp=share_link).
