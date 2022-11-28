@@ -14,8 +14,8 @@ TagManager:
   - 
   - Floor1
   - Blocking
+  - Item
   - Actor
-  - 
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Floor
     uniqueID: 4174662847
+    locked: 0
+  - name: Item
+    uniqueID: 3360603495
     locked: 0
   - name: Actor
     uniqueID: 1197640299
