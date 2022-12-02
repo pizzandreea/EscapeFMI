@@ -1,4 +1,7 @@
+using Game;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -29,9 +32,36 @@ namespace UI
 
         private void CreateInventoryUI()
         {
-            Instantiate(
+            int rowIndex = 0;
+            foreach (var itemName in GameManager.Instance.Inventory.Items.Keys)
+            {
+                var item = GameManager.Instance.Inventory.Items[itemName];
+
+                CreateInventoryUIRow(item.Sprite, item.Quantity, rowIndex);
+
+                rowIndex++;
+            }
+        }
+
+        private void CreateInventoryUIRow(Sprite sprite, int quantity, int rowIndex)
+        {
+            var inventoryUIRow = Instantiate(
                 InventoryRowPrefab, _inventoryUI.transform.position, Quaternion.identity, _inventoryUI.transform
             );
+
+            foreach (Transform transform in inventoryUIRow.transform)
+            {
+                if (transform.name == "Sprite")
+                {
+                    var image = transform.GetComponent<Image>();
+                    image.sprite = sprite;
+                }
+                else if (transform.name == "Text")
+                {
+                    var text = transform.GetComponent<TextMeshProUGUI>();
+                    text.text = "x" + quantity;
+                }
+            }
         }
     }
 }
