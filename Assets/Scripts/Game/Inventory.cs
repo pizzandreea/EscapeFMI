@@ -9,8 +9,8 @@ namespace Game
 
         public void PickUp(Item item)
         {
-            Debug.Log("Picked up " + item.Name);
             items.Add(item);
+            GameManager.Instance.InventoryUIManager.HandleInventoryUpdate();
         }
     }
 }

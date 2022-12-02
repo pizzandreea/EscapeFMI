@@ -1,3 +1,4 @@
+using UI;
 using UnityEngine;
 
 namespace Game
@@ -6,6 +7,7 @@ namespace Game
     {
         public static GameManager Instance;
         public Inventory Inventory;
+        public InventoryUIManager InventoryUIManager;
 
         public void Awake()
         {
@@ -17,9 +19,9 @@ namespace Game
             }
 
             Instance = this;
-            DontDestroyOnLoad(gameObject);
-
             Inventory = GetComponent<Inventory>();
+            InventoryUIManager = GetComponent<InventoryUIManager>();
+            DontDestroyOnLoad(gameObject);
         }
     }
 }

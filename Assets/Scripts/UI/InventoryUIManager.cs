@@ -13,7 +13,7 @@ namespace UI
             CreateInventoryUI();
         }
 
-        private void HandleInventoryUpdate()
+        public void HandleInventoryUpdate()
         {
             ClearInventoryUI();
             CreateInventoryUI();
