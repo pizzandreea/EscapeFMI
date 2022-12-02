@@ -1,27 +1,29 @@
-using System;
 using UnityEngine;
 
-public class Collectable : Collidable
+namespace Game
 {
-    private Item _item;
-
-    protected override void Start()
+    public class Collectable : Collidable
     {
-        base.Start();
+        private Item _item;
 
-        var spriteRenderer = GetComponent<SpriteRenderer>();
-        _item = new Item(name, spriteRenderer.sprite);
-        onCollide.AddListener(HandleCollision);
-    }
-
-    private void HandleCollision(Collider2D collider)
-    {
-        if (!collider.CompareTag("Player"))
+        protected override void Start()
         {
-            return;
+            base.Start();
+
+            var spriteRenderer = GetComponent<SpriteRenderer>();
+            _item = new Item(name, spriteRenderer.sprite);
+            onCollide.AddListener(HandleCollision);
         }
+
+        private void HandleCollision(Collider2D collider)
+        {
+            if (!collider.CompareTag("Player"))
+            {
+                return;
+            }
         
-        GameManager.instance.inventory.PickUp(_item);
-        Destroy(gameObject);
+            GameManager.instance.inventory.PickUp(_item);
+            Destroy(gameObject);
+        }
     }
 }

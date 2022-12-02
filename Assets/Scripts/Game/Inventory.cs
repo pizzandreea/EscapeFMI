@@ -1,13 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+namespace Game
 {
-    public List<Item> items = new();
-
-    public void PickUp(Item item)
+    public class Inventory : MonoBehaviour
     {
-        Debug.Log("Picked up " + item.Name);
-        items.Add(item);
+        public List<Item> items = new();
+
+        public void PickUp(Item item)
+        {
+            Debug.Log("Picked up " + item.Name);
+            items.Add(item);
+        }
     }
 }

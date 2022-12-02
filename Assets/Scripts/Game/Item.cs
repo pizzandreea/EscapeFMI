@@ -1,14 +1,17 @@
 using System;
 using UnityEngine;
 
-public class Item
+namespace Game
 {
-    public readonly string Name;
-    public readonly Sprite Sprite;
-
-    public Item(String name, Sprite sprite)
+    public class Item
     {
-        Name = name;
-        Sprite = sprite;
+        public readonly string Name;
+        public readonly Sprite Sprite;
+
+        public Item(String name, Sprite sprite)
+        {
+            Name = name;
+            Sprite = sprite;
+        }
     }
 }

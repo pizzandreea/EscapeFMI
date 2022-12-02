@@ -1,22 +1,25 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace Game
 {
-    public static GameManager instance;
-    public Inventory inventory;
-
-    public void Awake()
+    public class GameManager : MonoBehaviour
     {
-        // Make sure we don't end up with more GameManagers in the "Don't destroy on load" scene
-        if (instance != null)
+        public static GameManager instance;
+        public Inventory inventory;
+
+        public void Awake()
         {
-            Destroy(gameObject);
-            return;
+            // Make sure we don't end up with more GameManagers in the "Don't destroy on load" scene
+            if (instance != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            inventory = GetComponent<Inventory>();
         }
-
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-
-        inventory = GetComponent<Inventory>();
     }
 }
