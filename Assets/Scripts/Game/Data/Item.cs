@@ -7,6 +7,7 @@ namespace Game
     {
         public readonly string Name;
         public readonly Sprite Sprite;
+        public int Quantity = 1;
 
         public Item(String name, Sprite sprite)
         {
