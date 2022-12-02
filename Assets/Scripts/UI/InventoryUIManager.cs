@@ -7,7 +7,7 @@ namespace UI
 {
     public class InventoryUIManager : MonoBehaviour
     {
-        public GameObject InventoryRowPrefab;
+        public GameObject InventoryUIRowPrefab;
         private GameObject _inventoryUI;
 
         public void Start()
@@ -45,10 +45,16 @@ namespace UI
 
         private void CreateInventoryUIRow(Sprite sprite, int quantity, int rowIndex)
         {
-            var inventoryUIRow = Instantiate(
-                InventoryRowPrefab, _inventoryUI.transform.position, Quaternion.identity, _inventoryUI.transform
+            var prefabRectTransform = InventoryUIRowPrefab.GetComponent<RectTransform>();
+            var prefabPosition = _inventoryUI.transform.position;
+            
+            var rowPosition = new Vector3(prefabPosition.x,
+                prefabPosition.y - rowIndex * prefabRectTransform.rect.height, prefabPosition.z
             );
-
+            
+            var inventoryUIRow = Instantiate(
+                InventoryUIRowPrefab, rowPosition, Quaternion.identity, _inventoryUI.transform
+            );
             foreach (Transform transform in inventoryUIRow.transform)
             {
                 if (transform.name == "Sprite")
