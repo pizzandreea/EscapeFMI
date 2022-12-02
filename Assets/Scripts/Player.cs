@@ -32,9 +32,9 @@ public class Player : MonoBehaviour
         // Swap sprite direction, right or left
 
         if (moveDelta.x > 0)
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         else if (moveDelta.x < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
 
         // Make sure nothing is blocking
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(movementSpeed * moveDelta.y * Time.deltaTime), LayerMask.GetMask("Humans", "Blocking"));
