@@ -1,14 +1,16 @@
+using System;
 using UnityEngine;
 
 public class Collectable : Collidable
 {
     private Item _item;
-    
+
     protected override void Start()
     {
         base.Start();
-        
-        _item = GetComponent<Item>();
+
+        var spriteRenderer = GetComponent<SpriteRenderer>();
+        _item = new Item(name, spriteRenderer.sprite);
         onCollide.AddListener(HandleCollision);
     }
 
@@ -20,5 +22,6 @@ public class Collectable : Collidable
         }
         
         GameManager.instance.inventory.PickUp(_item);
+        Destroy(gameObject);
     }
 }
