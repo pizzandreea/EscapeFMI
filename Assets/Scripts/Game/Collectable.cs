@@ -22,7 +22,7 @@ namespace Game
                 return;
             }
         
-            GameManager.instance.inventory.PickUp(_item);
+            GameManager.Instance.Inventory.PickUp(_item);
             Destroy(gameObject);
         }
     }
