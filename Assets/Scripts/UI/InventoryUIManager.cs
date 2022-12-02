@@ -7,15 +7,31 @@ namespace UI
         public GameObject InventoryRowPrefab;
         private GameObject _inventoryUI;
 
-        void Start()
+        public void Start()
         {
             _inventoryUI = GameObject.Find("InventoryUI");
-            HandleInventoryUpdate();
+            CreateInventoryUI();
         }
 
-        void HandleInventoryUpdate()
+        private void HandleInventoryUpdate()
         {
-            var inventoryRow = Instantiate(InventoryRowPrefab, _inventoryUI.transform.position, Quaternion.identity, _inventoryUI.transform);
+            ClearInventoryUI();
+            CreateInventoryUI();
+        }
+
+        private void ClearInventoryUI()
+        {
+            foreach (Transform child in _inventoryUI.transform)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+
+        private void CreateInventoryUI()
+        {
+            Instantiate(
+                InventoryRowPrefab, _inventoryUI.transform.position, Quaternion.identity, _inventoryUI.transform
+            );
         }
     }
 }
