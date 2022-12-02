@@ -6,7 +6,7 @@ namespace Game
 {
     public class Inventory : MonoBehaviour
     {
-        private Dictionary<string, Item> items;
+        private readonly Dictionary<string, Item> _items = new();
 
         public void PickUp(Item item)
         {
@@ -16,13 +16,13 @@ namespace Game
 
         private void AddItemToInventory(Item item)
         {
-            if (items.ContainsKey(item.Name))
+            if (_items.ContainsKey(item.Name))
             {
-                items[item.Name].Quantity += item.Quantity;
+                _items[item.Name].Quantity += item.Quantity;
             }
             else
             {
-                items.Add(item.Name, item);
+                _items.Add(item.Name, item);
             }
         }
     }
