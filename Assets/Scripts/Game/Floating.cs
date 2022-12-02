@@ -5,20 +5,14 @@ namespace Game
 {
     public class Floating : MonoBehaviour
     {
-        private const float Speed = 2.0f;
-        private const float Range = 0.005f;
-
-        private Vector3 _originalPosition;
-
-        public void Start()
-        {
-            _originalPosition = transform.position;
-        }
+        private const float Speed = 2.5f;
+        private const float Range = 0.00007f; 
 
         public void Update()
         {
-            var newY = Mathf.Sin(Time.time * Speed) * Range + _originalPosition.y;
-            transform.position = new Vector3(_originalPosition.x, newY, _originalPosition.z);
+            Vector3 currentPosition = transform.position;
+            var newY = Mathf.Sin(Time.time * Speed) * Range + currentPosition.y;
+            transform.position = new Vector3(currentPosition.x, newY, currentPosition.z);
         }
     }
 }
