@@ -4,49 +4,54 @@ namespace Game
 {
     public class Player : MonoBehaviour
     {
-        private BoxCollider2D boxCollider;
+        private const float RunningSpeed = 1.0f;
+        private const float NormalSpeed = 0.6f;
+        private const float SneakingSpeed = 0.3f;
 
-        private Vector3 moveDelta;
+        private BoxCollider2D _boxCollider;
 
-        private float movementSpeed = 2.0f;
-
-        private RaycastHit2D hit;
+        private float _movementSpeed = NormalSpeed;
+        private Vector3 _moveDelta;
+        private RaycastHit2D _hit;
 
         // Start is called before the first frame update
         private void Start()
         {
-            boxCollider = GetComponent<BoxCollider2D>();
+            _boxCollider = GetComponent<BoxCollider2D>();
         }
 
         // Update is called once per frame
         private void FixedUpdate()
         {
-            float x = Input.GetAxisRaw("Horizontal");
-            float y = Input.GetAxisRaw("Vertical");
+            var x = Input.GetAxisRaw("Horizontal");
+            var y = Input.GetAxisRaw("Vertical");
 
             // Reset moveDelta
-            moveDelta = new Vector3(x, y, 0);
+            _moveDelta = new Vector3(x, y, 0);
 
             // Swap sprite direction, right or left
-
-            if (moveDelta.x > 0)
-                transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-            else if (moveDelta.x < 0)
-                transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
-
-            // Make sure nothing is blocking
-            hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y),
-                Mathf.Abs(movementSpeed * moveDelta.y * Time.deltaTime), LayerMask.GetMask("Humans", "Blocking"));
-            if (hit.collider == null)
+            if (_moveDelta.x > 0)
             {
-                transform.Translate(0, movementSpeed * moveDelta.y * Time.deltaTime, 0);
+                transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            }
+            else if (_moveDelta.x < 0)
+            {
+                transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
             }
 
-            hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0),
-                Mathf.Abs(movementSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("Humans", "Blocking"));
-            if (hit.collider == null)
+            // Make sure nothing is blocking
+            _hit = Physics2D.BoxCast(transform.position, _boxCollider.size, 0, new Vector2(0, _moveDelta.y),
+                Mathf.Abs(_movementSpeed * _moveDelta.y * Time.deltaTime), LayerMask.GetMask("Blocking"));
+            if (_hit.collider == null)
             {
-                transform.Translate(movementSpeed * moveDelta.x * Time.deltaTime, 0, 0);
+                transform.Translate(0, _movementSpeed * _moveDelta.y * Time.deltaTime, 0);
+            }
+
+            _hit = Physics2D.BoxCast(transform.position, _boxCollider.size, 0, new Vector2(_moveDelta.x, 0),
+                Mathf.Abs(_movementSpeed * _moveDelta.x * Time.deltaTime), LayerMask.GetMask("Blocking"));
+            if (_hit.collider == null)
+            {
+                transform.Translate(_movementSpeed * _moveDelta.x * Time.deltaTime, 0, 0);
             }
         }
 
@@ -56,15 +61,15 @@ namespace Game
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                movementSpeed = 3.0f;
+                _movementSpeed = RunningSpeed;
             }
             else if (Input.GetKey(KeyCode.LeftControl))
             {
-                movementSpeed = 1.0f;
+                _movementSpeed = SneakingSpeed;
             }
             else if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.LeftControl))
             {
-                movementSpeed = 2.0f;
+                _movementSpeed = NormalSpeed;
             }
         }
     }
