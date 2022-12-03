@@ -25,5 +25,31 @@ namespace Game
                 Items.Add(item.Name, item);
             }
         }
+
+        private bool HasItem(String name)
+        {
+            if (!Items.ContainsKey(name))
+            {
+                return false;
+            }
+
+            return Items[name].Quantity > 0;
+        }
+
+        private void UseItem(String name)
+        {
+            if (!HasItem(name))
+            {
+                throw new Exception("The player doesn't have any '" + name + "' item.");
+            }
+
+            Items[name].Quantity -= 1;
+            if (Items[name].Quantity <= 0)
+            {
+                Items.Remove(name);
+            }
+
+            GameManager.Instance.InventoryUIManager.HandleInventoryUpdate();
+        }
     }
 }
