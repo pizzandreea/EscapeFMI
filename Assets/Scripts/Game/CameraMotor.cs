@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Game
 {
+    [ExecuteInEditMode]
     public class CameraMotor : MonoBehaviour
     {
         public Transform lookAt;
