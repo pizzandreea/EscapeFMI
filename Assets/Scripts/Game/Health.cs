@@ -24,5 +24,14 @@ namespace Game
                 onDeath.Invoke();
             }
         }
+        
+        public void Heal(int amount)
+        {
+            health += amount;
+            if (health > maxHealth)
+            {
+                health = maxHealth;
+            }
+        }
     }
 }
