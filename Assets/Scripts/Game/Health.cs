@@ -1,25 +1,28 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Health : MonoBehaviour
+namespace Game
 {
-    public int maxHealth = 100;
-    public UnityEvent onDeath;
-
-    private int health;
-
-    void Start()
+    public class Health : MonoBehaviour
     {
-        health = maxHealth;
-    }
+        public int maxHealth = 100;
+        public UnityEvent onDeath;
 
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
+        private int health;
 
-        if (health <= 0)
+        void Start()
         {
-            onDeath.Invoke();
+            health = maxHealth;
+        }
+
+        public void TakeDamage(int damage)
+        {
+            health -= damage;
+
+            if (health <= 0)
+            {
+                onDeath.Invoke();
+            }
         }
     }
 }

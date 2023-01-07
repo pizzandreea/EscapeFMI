@@ -72,5 +72,10 @@ namespace Game
                 _movementSpeed = NormalSpeed;
             }
         }
+        
+        public void HandleDeath()
+        {
+            Destroy(gameObject);
+        }
     }
 }
