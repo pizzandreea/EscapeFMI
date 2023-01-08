@@ -7770,6 +7770,7 @@ GameObject:
   - component: {fileID: 1496531716}
   - component: {fileID: 1496531715}
   - component: {fileID: 1496531719}
+  - component: {fileID: 1496531720}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -7911,6 +7912,19 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   health: 100
+--- !u!114 &1496531720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496531714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0270459aed924169adf854732d8220b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pfPopupText: {fileID: 5719917295660356075, guid: ff6df9e96d7d1418994448abd711cecc, type: 3}
 --- !u!1 &1616534410
 GameObject:
   m_ObjectHideFlags: 0

@@ -50,3 +50,6 @@ TagManager:
   - name: Actor
     uniqueID: 1197640299
     locked: 0
+  - name: PopupText
+    uniqueID: 2820137445
+    locked: 0
