@@ -6,7 +6,6 @@ namespace Game
     {
         private void Start()
         {
-            PopupText.Create(transform.position, "300");
         }
     }
 }
