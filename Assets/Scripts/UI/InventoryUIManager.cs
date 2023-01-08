@@ -12,21 +12,34 @@ namespace UI
 
         public void Start()
         {
-            _inventoryUI = GameObject.Find("InventoryUI");
-            CreateInventoryUI();
+           
+                _inventoryUI = GameObject.Find("InventoryUI");
+                CreateInventoryUI();
+            
+            
         }
 
         public void HandleInventoryUpdate()
         {
-            ClearInventoryUI();
-            CreateInventoryUI();
+            Debug.Log(InventoryUIRowPrefab);
+            Debug.Log(_inventoryUI);
+            if(InventoryUIRowPrefab != null && _inventoryUI != null)
+            {
+                //ClearInventoryUI();
+                CreateInventoryUI();
+            }
+            
         }
 
         private void ClearInventoryUI()
         {
             foreach (Transform child in _inventoryUI.transform)
             {
-                Destroy(child.gameObject);
+                if( child!= null && child.gameObject != null)
+                {
+                    //Destroy(child.gameObject);
+                    child.gameObject.SetActive(false);
+                }
             }
         }
 

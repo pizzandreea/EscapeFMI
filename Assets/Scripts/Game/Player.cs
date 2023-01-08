@@ -7,6 +7,7 @@ namespace Game
         private const float RunningSpeed = 1.0f;
         private const float NormalSpeed = 0.6f;
         private const float SneakingSpeed = 0.3f;
+        public bool isDead;
 
         private BoxCollider2D _boxCollider;
 
@@ -18,6 +19,7 @@ namespace Game
         private void Start()
         {
             _boxCollider = GetComponent<BoxCollider2D>();
+            isDead = false;
         }
 
         // Update is called once per frame
