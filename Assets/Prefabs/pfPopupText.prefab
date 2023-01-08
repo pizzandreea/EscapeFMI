@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1177249432678780522}
   - component: {fileID: 6966235446835569229}
   - component: {fileID: 5610305426862994112}
+  - component: {fileID: -768948173491863500}
   m_Layer: 0
   m_Name: pfPopupText
   m_TagString: Untagged
@@ -181,3 +182,15 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6209286283477826532}
   m_Mesh: {fileID: 0}
+--- !u!114 &-768948173491863500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6209286283477826532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f6bb21fda9e4a00be53bf2892e771b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

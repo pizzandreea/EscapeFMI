@@ -8,7 +8,9 @@ namespace Game
 
         private void Start()
         {
-            Instantiate(pfPopupText, transform.position, Quaternion.identity);
+            Transform damagePopupTransform = Instantiate(pfPopupText, transform.position, Quaternion.identity);
+            PopupText damagePopup = damagePopupTransform.GetComponent<PopupText>();
+            damagePopup.Setup(300);
         }
     }
 }

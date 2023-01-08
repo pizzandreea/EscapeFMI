@@ -1,17 +1,20 @@
+using TMPro;
 using UnityEngine;
 
 namespace Game
 {
     public class PopupText : MonoBehaviour
     {
-        void Start()
+        private TextMeshPro textMesh;
+        
+        private void Awake()
         {
-
+            textMesh = transform.GetComponent<TextMeshPro>();
         }
-
-        void Update()
+        
+        public void Setup(int damageAmount)
         {
-
+            textMesh.SetText(damageAmount.ToString());
         }
     }
 }
