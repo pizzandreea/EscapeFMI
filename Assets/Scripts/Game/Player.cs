@@ -75,7 +75,7 @@ namespace Game
         
         public void HandleDeath()
         {
-            Destroy(gameObject);
+            // TODO - trigger restart screen
         }
     }
 }
