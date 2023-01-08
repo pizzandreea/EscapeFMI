@@ -5,7 +5,9 @@ namespace Game
 {
     public class PopupText : MonoBehaviour
     {
-        private TextMeshPro textMesh;
+        private const float MoveYSpeed = 0.2f;
+        
+        private TextMeshPro _textMesh;
 
         public static PopupText Create(Vector3 position, string text)
         {
@@ -18,12 +20,17 @@ namespace Game
 
         private void Awake()
         {
-            textMesh = transform.GetComponent<TextMeshPro>();
+            _textMesh = transform.GetComponent<TextMeshPro>();
         }
 
         private void Setup(string text)
         {
-            textMesh.SetText(text);
+            _textMesh.SetText(text);
+        }
+
+        private void Update()
+        {
+            transform.position += new Vector3(0, MoveYSpeed) * Time.deltaTime;
         }
     }
 }
