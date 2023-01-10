@@ -12,30 +12,30 @@ namespace UI
 
         public void Start()
         {
-           
-                _inventoryUI = GameObject.Find("InventoryUI");
-                CreateInventoryUI();
-            
-            
+
+            _inventoryUI = GameObject.Find("InventoryUI");
+            Debug.Log("inv ui");
+            Debug.Log(_inventoryUI);
+
+            CreateInventoryUI();
+
         }
 
         public void HandleInventoryUpdate()
         {
-            Debug.Log(InventoryUIRowPrefab);
-            Debug.Log(_inventoryUI);
-            if(InventoryUIRowPrefab != null && _inventoryUI != null)
+            if (InventoryUIRowPrefab != null && _inventoryUI != null)
             {
-                //ClearInventoryUI();
+                ClearInventoryUI();
                 CreateInventoryUI();
             }
-            
+
         }
 
         private void ClearInventoryUI()
         {
             foreach (Transform child in _inventoryUI.transform)
             {
-                if( child!= null && child.gameObject != null)
+                if (child != null && child.gameObject != null)
                 {
                     //Destroy(child.gameObject);
                     child.gameObject.SetActive(false);
@@ -60,11 +60,11 @@ namespace UI
         {
             var prefabRectTransform = InventoryUIRowPrefab.GetComponent<RectTransform>();
             var prefabPosition = _inventoryUI.transform.position;
-            
+
             var rowPosition = new Vector3(prefabPosition.x,
                 prefabPosition.y - rowIndex * prefabRectTransform.rect.height, prefabPosition.z
             );
-            
+
             var inventoryUIRow = Instantiate(
                 InventoryUIRowPrefab, rowPosition, Quaternion.identity, _inventoryUI.transform
             );

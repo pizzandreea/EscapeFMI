@@ -239,7 +239,9 @@ namespace Pathfinding {
 
 		/// <summary>\copydoc Pathfinding::IAstarAI::GetRemainingPath</summary>
 		public void GetRemainingPath (List<Vector3> buffer, out bool stale) {
-			buffer.Clear();
+            Debug.Log("sunt a *");
+
+            buffer.Clear();
 			buffer.Add(position);
 			if (!interpolator.valid) {
 				stale = true;
