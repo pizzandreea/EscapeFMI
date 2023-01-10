@@ -8,37 +8,40 @@ namespace UI
     public class InventoryUIManager : MonoBehaviour
     {
         public GameObject InventoryUIRowPrefab;
-        private GameObject _inventoryUI;
+        public GameObject _inventoryUI;
 
-        public void Start()
+        public void Awake()
         {
-
             _inventoryUI = GameObject.Find("InventoryUI");
-            Debug.Log("inv ui");
-            Debug.Log(_inventoryUI);
 
+            if(_inventoryUI != null)
+            {
+                GameManager.Instance.Inventory.Items.Clear();
+            }
             CreateInventoryUI();
 
         }
 
         public void HandleInventoryUpdate()
         {
-            if (InventoryUIRowPrefab != null && _inventoryUI != null)
+            _inventoryUI = GameObject.Find("InventoryUI");
+            if (_inventoryUI != null)
             {
                 ClearInventoryUI();
                 CreateInventoryUI();
             }
-
         }
 
         private void ClearInventoryUI()
         {
-            foreach (Transform child in _inventoryUI.transform)
+            if (_inventoryUI != null)
             {
-                if (child != null && child.gameObject != null)
+                foreach (Transform child in _inventoryUI.transform)
                 {
-                    //Destroy(child.gameObject);
-                    child.gameObject.SetActive(false);
+                    if (child != null && child.gameObject != null)
+                    {
+                        child.gameObject.SetActive(false);
+                    }
                 }
             }
         }

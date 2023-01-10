@@ -37,10 +37,6 @@ namespace Game
 
         public void Restart()
         {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            //SceneManager.LoadScene("Floor 0");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             UnityEngine.SceneManagement.SceneManager.LoadScene("Floor 0");
 
         }
