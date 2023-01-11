@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 060beb8768ca51943b74c8befb19e56c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Autumn Pixel Extra Wide
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 890ed9d104217fd418327fb6ed7e0a96, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

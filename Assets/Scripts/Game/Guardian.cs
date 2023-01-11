@@ -8,7 +8,6 @@ namespace Game
         public Player player;
         public GameManager GameManager;
         public AIPath aIPath;
-        Vector2 direction;
 
         public float NormalSpeed = 0.6f;
 
@@ -32,32 +31,27 @@ namespace Game
         {
             if (collider.CompareTag("Player"))
             {
-                StopFollowingPlayer();
+                //StopFollowingPlayer();
             }
         }
 
         private void KillPlayer()
         {
-            if(!player.isDead)
+            if (!player.isDead)
             {
-                Debug.Log("Guardian - Kill player");
                 player.isDead = true;
                 GameManager.GameOver();
             }
-            
         }
 
         private void StartFollowingPlayer()
         {
-            Debug.Log("Guardian - start following player");
-
             aIPath = GetComponent<AIPath>();
             aIPath.canMove = true;
         }
 
         private void StopFollowingPlayer()
         {
-            Debug.Log("Guardian - stop following player");
             aIPath.canMove = false;
         }
     }

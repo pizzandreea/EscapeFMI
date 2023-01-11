@@ -17,7 +17,7 @@ namespace Game
             if (Instance != null)
             {
                 Destroy(gameObject);
-   
+
                 return;
             }
 
@@ -26,10 +26,17 @@ namespace Game
             InventoryUIManager = GetComponent<InventoryUIManager>();
             DontDestroyOnLoad(gameObject);
         }
+        public void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
 
         public void GameOver()
         {
-            if(GameOverUI != null)
+            if (GameOverUI != null)
             {
                 GameOverUI.SetActive(true);
             }
@@ -37,7 +44,8 @@ namespace Game
 
         public void Restart()
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Floor 0");
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         }
     }

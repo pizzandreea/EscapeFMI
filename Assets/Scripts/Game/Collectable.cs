@@ -9,9 +9,6 @@ namespace Game
         protected override void Start()
         {
             base.Start();
-            Debug.Log("start object");
-
-            //gameObject.SetActive(true);
 
             var spriteRenderer = GetComponent<SpriteRenderer>();
             _item = new Item(name, spriteRenderer.sprite);
@@ -30,7 +27,6 @@ namespace Game
             //Destroy(gameObject);
             if(gameObject != null)
             {
-                Debug.Log("aici");
 
                 gameObject.SetActive(false);
 
