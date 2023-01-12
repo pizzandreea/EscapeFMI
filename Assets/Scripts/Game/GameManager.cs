@@ -10,6 +10,7 @@ namespace Game
         public GameObject GameOverUI;
         public Inventory Inventory;
         public InventoryUIManager InventoryUIManager;
+        public PlayerHeartsUIManager PlayerHeartsUIManager;
 
         public void Awake()
         {
@@ -24,6 +25,7 @@ namespace Game
             Instance = this;
             Inventory = GetComponent<Inventory>();
             InventoryUIManager = GetComponent<InventoryUIManager>();
+            PlayerHeartsUIManager = GetComponent<PlayerHeartsUIManager>();
             DontDestroyOnLoad(gameObject);
         }
         public void Update()

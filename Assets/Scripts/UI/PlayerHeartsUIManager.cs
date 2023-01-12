@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Game;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,14 +21,25 @@ namespace UI
         private const int MaxHearts = 5;
         private int _halfHeartToHealthValue;
 
-        public void Start()
+        public void Awake()
         {
             _playerHealth = player.GetComponent<Health>();
             _halfHeartToHealthValue = _playerHealth.maxHealth / MaxHearts / 2;
+
         }
 
-        public void Update()
+        public void InitializeHearts()
         {
+            for (var i = 0; i < MaxHearts; i++)
+            {
+                hearts[i].sprite = fullHeart;
+            }
+        }
+
+        public void HeartsNumber()
+        {
+            player = GameObject.Find("Player");
+            _playerHealth = player.GetComponent<Health>();
 
             var numOfHalfHearts = _playerHealth.health / _halfHeartToHealthValue;
             var numOfFullHearts = numOfHalfHearts / 2;
