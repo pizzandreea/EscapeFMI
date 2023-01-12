@@ -16,9 +16,23 @@ namespace Game
 
         public int health;
 
-        void Start()
+        void Awake()
         {
             health = maxHealth;
+            GameManager.Instance.PlayerHeartsUIManager.InitializeHearts();
+        }
+
+        [Button("Debug - Take damage")]
+        private void DebugTakeDamage()
+        {
+            var isCritical = Random.Range(0, 3) == 0;
+            TakeDamage(Random.Range((int)(5.0 / 100 * maxHealth), (int)(10.0 / 100 * maxHealth)), isCritical);
+        }
+
+        [Button("Debug - Heal")]
+        private void DebugHeal()
+        {
+            Heal(Random.Range((int)(10.0 / 100 * maxHealth), (int)(20.0 / 100 * maxHealth)));
         }
 
         public void TakeDamage(int damage, bool isCritical = false)
@@ -42,6 +56,7 @@ namespace Game
             {
                 onDeath.Invoke();
             }
+            GameManager.Instance.PlayerHeartsUIManager.HeartsNumber();
         }
 
         public void Heal(int amount)
@@ -52,19 +67,8 @@ namespace Game
             }
 
             health = Mathf.Min(maxHealth, health + amount);
-        }
 
-        [Button("Debug - Take damage")]
-        private void DebugTakeDamage()
-        {
-            var isCritical = Random.Range(0, 3) == 0;
-            TakeDamage(Random.Range((int)(5.0 / 100 * maxHealth), (int)(10.0 / 100 * maxHealth)), isCritical);
-        }
-
-        [Button("Debug - Heal")]
-        private void DebugHeal()
-        {
-            Heal(Random.Range((int)(10.0 / 100 * maxHealth), (int)(20.0 / 100 * maxHealth)));
+            GameManager.Instance.PlayerHeartsUIManager.HeartsNumber();
         }
     }
 }

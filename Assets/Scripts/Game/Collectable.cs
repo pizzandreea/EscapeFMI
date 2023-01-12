@@ -23,7 +23,15 @@ namespace Game
             }
         
             GameManager.Instance.Inventory.PickUp(_item);
-            Destroy(gameObject);
+
+            //Destroy(gameObject);
+            if(gameObject != null)
+            {
+
+                gameObject.SetActive(false);
+
+            }
+
         }
     }
 }

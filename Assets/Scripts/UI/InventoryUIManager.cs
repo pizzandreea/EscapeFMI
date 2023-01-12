@@ -8,25 +8,41 @@ namespace UI
     public class InventoryUIManager : MonoBehaviour
     {
         public GameObject InventoryUIRowPrefab;
-        private GameObject _inventoryUI;
+        public GameObject _inventoryUI;
 
-        public void Start()
+        public void Awake()
         {
             _inventoryUI = GameObject.Find("InventoryUI");
+
+            if(_inventoryUI != null)
+            {
+                GameManager.Instance.Inventory.Items.Clear();
+            }
             CreateInventoryUI();
+
         }
 
         public void HandleInventoryUpdate()
         {
-            ClearInventoryUI();
-            CreateInventoryUI();
+            _inventoryUI = GameObject.Find("InventoryUI");
+            if (_inventoryUI != null)
+            {
+                ClearInventoryUI();
+                CreateInventoryUI();
+            }
         }
 
         private void ClearInventoryUI()
         {
-            foreach (Transform child in _inventoryUI.transform)
+            if (_inventoryUI != null)
             {
-                Destroy(child.gameObject);
+                foreach (Transform child in _inventoryUI.transform)
+                {
+                    if (child != null && child.gameObject != null)
+                    {
+                        child.gameObject.SetActive(false);
+                    }
+                }
             }
         }
 
@@ -47,11 +63,11 @@ namespace UI
         {
             var prefabRectTransform = InventoryUIRowPrefab.GetComponent<RectTransform>();
             var prefabPosition = _inventoryUI.transform.position;
-            
+
             var rowPosition = new Vector3(prefabPosition.x,
                 prefabPosition.y - rowIndex * prefabRectTransform.rect.height, prefabPosition.z
             );
-            
+
             var inventoryUIRow = Instantiate(
                 InventoryUIRowPrefab, rowPosition, Quaternion.identity, _inventoryUI.transform
             );
