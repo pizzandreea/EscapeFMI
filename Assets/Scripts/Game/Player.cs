@@ -74,7 +74,7 @@ namespace Game
                 _movementSpeed = NormalSpeed;
             }
         }
-        
+
         public void HandleDeath()
         {
             // TODO - trigger restart screen

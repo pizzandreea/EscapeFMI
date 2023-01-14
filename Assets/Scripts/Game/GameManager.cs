@@ -28,6 +28,7 @@ namespace Game
             PlayerHeartsUIManager = GetComponent<PlayerHeartsUIManager>();
             DontDestroyOnLoad(gameObject);
         }
+
         public void Update()
         {
             if (Input.GetKeyDown(KeyCode.R))

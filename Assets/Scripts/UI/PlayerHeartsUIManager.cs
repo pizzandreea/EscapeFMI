@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using Game;
 using UnityEngine;
 using UnityEngine.UI;

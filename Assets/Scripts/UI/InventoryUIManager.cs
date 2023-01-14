@@ -14,7 +14,7 @@ namespace UI
         {
             _inventoryUI = GameObject.Find("InventoryUI");
 
-            if(_inventoryUI != null)
+            if (_inventoryUI != null)
             {
                 GameManager.Instance.Inventory.Items.Clear();
             }

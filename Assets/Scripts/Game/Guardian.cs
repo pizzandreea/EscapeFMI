@@ -1,5 +1,5 @@
-using UnityEngine;
 using Pathfinding;
+using UnityEngine;
 
 namespace Game
 {
