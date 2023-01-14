@@ -37,7 +37,7 @@ namespace Game
                 PopupText.Create(transform.position, damage.ToString(), _damageColorCritical, CriticalHitScale);
             }
 
-            if (health == 0)
+            if (health <= 0)
             {
                 onDeath.Invoke();
             }

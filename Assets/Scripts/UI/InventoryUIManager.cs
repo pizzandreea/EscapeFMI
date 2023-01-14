@@ -21,11 +21,10 @@ namespace UI
 
         private void Update()
         {
-            if (GameManager.Instance.Inventory.shouldUpdateUI)
+            if (GameManager.Instance.inventory.shouldUpdateUI)
             {
-                Debug.Log("update");
                 HandleInventoryUpdate();
-                GameManager.Instance.Inventory.shouldUpdateUI = false;
+                GameManager.Instance.inventory.shouldUpdateUI = false;
             }
         }
 
@@ -49,9 +48,9 @@ namespace UI
         private void CreateInventoryUI()
         {
             var rowIndex = 0;
-            foreach (var itemName in GameManager.Instance.Inventory.GetItems().Keys)
+            foreach (var itemName in GameManager.Instance.inventory.GetItems().Keys)
             {
-                var item = GameManager.Instance.Inventory.GetItems()[itemName];
+                var item = GameManager.Instance.inventory.GetItems()[itemName];
 
                 CreateInventoryUIRow(item.Sprite, item.Quantity, rowIndex);
 

@@ -8,8 +8,9 @@ namespace Game
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
-        public GameObject GameOverUI;
-        public Inventory Inventory;
+
+        public Inventory inventory;
+        public bool isGameOver;
 
         private void Awake()
         {
@@ -22,27 +23,15 @@ namespace Game
             }
 
             Instance = this;
-            Inventory = GetComponent<Inventory>();
+            inventory = GetComponent<Inventory>();
             DontDestroyOnLoad(gameObject);
         }
 
-        private void Update()
+        public void Restart()
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Restart();
-            }
-        }
-
-        public void ShowGameOverScreen()
-        {
-            GameOverUI.SetActive(true);
-        }
-
-        private void Restart()
-        {
-            Inventory.Clear();
+            inventory.Clear();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            isGameOver = false;
         }
     }
 }
