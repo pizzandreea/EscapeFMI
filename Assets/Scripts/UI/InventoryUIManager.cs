@@ -7,51 +7,50 @@ namespace UI
 {
     public class InventoryUIManager : MonoBehaviour
     {
-        public GameObject InventoryUIRowPrefab;
-        public GameObject _inventoryUI;
+        private GameObject _inventoryUI;
 
-        public void Awake()
+        private void Awake()
         {
             _inventoryUI = GameObject.Find("InventoryUI");
-
-            if(_inventoryUI != null)
-            {
-                GameManager.Instance.Inventory.Items.Clear();
-            }
-            CreateInventoryUI();
-
         }
 
-        public void HandleInventoryUpdate()
+        private void Start()
         {
-            _inventoryUI = GameObject.Find("InventoryUI");
-            if (_inventoryUI != null)
+            CreateInventoryUI();
+        }
+
+        private void Update()
+        {
+            if (GameManager.Instance.inventory.shouldUpdateUI)
             {
-                ClearInventoryUI();
-                CreateInventoryUI();
+                HandleInventoryUpdate();
+                GameManager.Instance.inventory.shouldUpdateUI = false;
             }
+        }
+
+        private void HandleInventoryUpdate()
+        {
+            ClearInventoryUI();
+            CreateInventoryUI();
         }
 
         private void ClearInventoryUI()
         {
-            if (_inventoryUI != null)
+            foreach (Transform child in _inventoryUI.transform)
             {
-                foreach (Transform child in _inventoryUI.transform)
+                if (child != null && child.gameObject != null)
                 {
-                    if (child != null && child.gameObject != null)
-                    {
-                        child.gameObject.SetActive(false);
-                    }
+                    child.gameObject.SetActive(false);
                 }
             }
         }
 
         private void CreateInventoryUI()
         {
-            int rowIndex = 0;
-            foreach (var itemName in GameManager.Instance.Inventory.Items.Keys)
+            var rowIndex = 0;
+            foreach (var itemName in GameManager.Instance.inventory.GetItems().Keys)
             {
-                var item = GameManager.Instance.Inventory.Items[itemName];
+                var item = GameManager.Instance.inventory.GetItems()[itemName];
 
                 CreateInventoryUIRow(item.Sprite, item.Quantity, rowIndex);
 
@@ -61,7 +60,7 @@ namespace UI
 
         private void CreateInventoryUIRow(Sprite sprite, int quantity, int rowIndex)
         {
-            var prefabRectTransform = InventoryUIRowPrefab.GetComponent<RectTransform>();
+            var prefabRectTransform = GameAssets.instance.pfInventoryUIRow.GetComponent<RectTransform>();
             var prefabPosition = _inventoryUI.transform.position;
 
             var rowPosition = new Vector3(prefabPosition.x,
@@ -69,7 +68,7 @@ namespace UI
             );
 
             var inventoryUIRow = Instantiate(
-                InventoryUIRowPrefab, rowPosition, Quaternion.identity, _inventoryUI.transform
+                GameAssets.instance.pfInventoryUIRow, rowPosition, Quaternion.identity, _inventoryUI.transform
             );
             foreach (Transform transform in inventoryUIRow.transform)
             {

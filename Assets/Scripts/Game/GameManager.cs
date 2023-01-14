@@ -1,18 +1,19 @@
+using System;
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace Game
 {
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
-        public GameObject GameOverUI;
-        public Inventory Inventory;
-        public InventoryUIManager InventoryUIManager;
-        public PlayerHeartsUIManager PlayerHeartsUIManager;
 
-        public void Awake()
+        public Inventory inventory;
+        public Boolean isGameOver;
+
+        private void Awake()
         {
             // Make sure we don't end up with more GameManagers in the "Don't destroy on load" scene
             if (Instance != null)
@@ -23,32 +24,15 @@ namespace Game
             }
 
             Instance = this;
-            Inventory = GetComponent<Inventory>();
-            InventoryUIManager = GetComponent<InventoryUIManager>();
-            PlayerHeartsUIManager = GetComponent<PlayerHeartsUIManager>();
+            inventory = GetComponent<Inventory>();
             DontDestroyOnLoad(gameObject);
-        }
-        public void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
-        }
-
-        public void GameOver()
-        {
-            if (GameOverUI != null)
-            {
-                GameOverUI.SetActive(true);
-            }
         }
 
         public void Restart()
         {
-
+            inventory.Clear();
+            isGameOver = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
         }
     }
 }
