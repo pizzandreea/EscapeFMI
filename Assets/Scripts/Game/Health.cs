@@ -11,28 +11,13 @@ namespace Game
         private readonly Color _healColor = new(0.13f, 0.87f, 0.22f, 1.0f);
         private const float CriticalHitScale = 1.2f;
 
-        public int maxHealth = 100;
         public UnityEvent onDeath;
-
+        public int maxHealth = 100;
         public int health;
 
-        void Awake()
+        private void Awake()
         {
             health = maxHealth;
-            GameManager.Instance.PlayerHeartsUIManager.InitializeHearts();
-        }
-
-        [Button("Debug - Take damage")]
-        private void DebugTakeDamage()
-        {
-            var isCritical = Random.Range(0, 3) == 0;
-            TakeDamage(Random.Range((int)(5.0 / 100 * maxHealth), (int)(10.0 / 100 * maxHealth)), isCritical);
-        }
-
-        [Button("Debug - Heal")]
-        private void DebugHeal()
-        {
-            Heal(Random.Range((int)(10.0 / 100 * maxHealth), (int)(20.0 / 100 * maxHealth)));
         }
 
         public void TakeDamage(int damage, bool isCritical = false)
@@ -56,7 +41,6 @@ namespace Game
             {
                 onDeath.Invoke();
             }
-            GameManager.Instance.PlayerHeartsUIManager.HeartsNumber();
         }
 
         public void Heal(int amount)
@@ -67,8 +51,19 @@ namespace Game
             }
 
             health = Mathf.Min(maxHealth, health + amount);
+        }
 
-            GameManager.Instance.PlayerHeartsUIManager.HeartsNumber();
+        [Button("Debug - Take damage")]
+        private void DebugTakeDamage()
+        {
+            var isCritical = Random.Range(0, 3) == 0;
+            TakeDamage(Random.Range((int)(5.0 / 100 * maxHealth), (int)(10.0 / 100 * maxHealth)), isCritical);
+        }
+
+        [Button("Debug - Heal")]
+        private void DebugHeal()
+        {
+            Heal(Random.Range((int)(10.0 / 100 * maxHealth), (int)(20.0 / 100 * maxHealth)));
         }
     }
 }
