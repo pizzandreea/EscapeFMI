@@ -40,7 +40,7 @@ namespace Game
             if (!player.isDead)
             {
                 player.isDead = true;
-                GameManager.GameOver();
+                GameManager.ShowGameOverScreen();
             }
         }
 

@@ -4,6 +4,9 @@ namespace Game
 {
     public class GameAssets : MonoBehaviour
     {
+        public Transform pfPopupText;
+        public Transform pfInventoryUIRow;
+
         private static GameAssets _instance;
 
         public static GameAssets instance
@@ -18,7 +21,5 @@ namespace Game
                 return _instance;
             }
         }
-
-        public Transform pfPopupText;
     }
 }

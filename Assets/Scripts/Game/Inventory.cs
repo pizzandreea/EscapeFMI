@@ -1,39 +1,46 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Game
 {
     public class Inventory : MonoBehaviour
     {
-        public readonly Dictionary<string, Item> Items = new();
+        public bool shouldUpdateUI;
+        private readonly Dictionary<string, Item> _items = new();
 
+        public Dictionary<string, Item> GetItems()
+        {
+            return _items;
+        }
+        
         public void PickUp(Item item)
         {
             AddItemToInventory(item);
-            GameManager.Instance.InventoryUIManager.HandleInventoryUpdate();
+            shouldUpdateUI = true;
         }
 
         private void AddItemToInventory(Item item)
         {
-            if (Items.ContainsKey(item.Name))
+            if (_items.ContainsKey(item.Name))
             {
-                Items[item.Name].Quantity += item.Quantity;
+                _items[item.Name].Quantity += item.Quantity;
             }
             else
             {
-                Items.Add(item.Name, item);
+                _items.Add(item.Name, item);
             }
         }
 
         private bool HasItem(String name)
         {
-            if (!Items.ContainsKey(name))
+            if (!_items.ContainsKey(name))
             {
                 return false;
             }
 
-            return Items[name].Quantity > 0;
+            return _items[name].Quantity > 0;
         }
 
         private void UseItem(String name)
@@ -43,13 +50,20 @@ namespace Game
                 throw new Exception("The player doesn't have any '" + name + "' item.");
             }
 
-            Items[name].Quantity -= 1;
-            if (Items[name].Quantity <= 0)
+            _items[name].Quantity -= 1;
+            if (_items[name].Quantity <= 0)
             {
-                Items.Remove(name);
+                _items.Remove(name);
             }
 
-            GameManager.Instance.InventoryUIManager.HandleInventoryUpdate();
+            shouldUpdateUI = true;
+        }
+
+        public void Clear()
+        {
+            Debug.Log("clearrr");
+            _items.Clear();
+            shouldUpdateUI = true;
         }
     }
 }

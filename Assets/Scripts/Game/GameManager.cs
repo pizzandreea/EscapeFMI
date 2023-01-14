@@ -10,9 +10,8 @@ namespace Game
         public static GameManager Instance;
         public GameObject GameOverUI;
         public Inventory Inventory;
-        public InventoryUIManager InventoryUIManager;
 
-        public void Awake()
+        private void Awake()
         {
             // Make sure we don't end up with more GameManagers in the "Don't destroy on load" scene
             if (Instance != null)
@@ -24,31 +23,26 @@ namespace Game
 
             Instance = this;
             Inventory = GetComponent<Inventory>();
-            InventoryUIManager = GetComponent<InventoryUIManager>();
             DontDestroyOnLoad(gameObject);
         }
 
-        public void Update()
+        private void Update()
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Restart();
             }
         }
 
-        public void GameOver()
+        public void ShowGameOverScreen()
         {
-            if (GameOverUI != null)
-            {
-                GameOverUI.SetActive(true);
-            }
+            GameOverUI.SetActive(true);
         }
 
-        public void Restart()
+        private void Restart()
         {
-
+            Inventory.Clear();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
         }
     }
 }

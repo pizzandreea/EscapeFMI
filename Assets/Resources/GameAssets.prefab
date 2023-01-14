@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfPopupText: {fileID: 5719917295660356075, guid: ff6df9e96d7d1418994448abd711cecc, type: 3}
+  pfInventoryUIRow: {fileID: 5663401725929974120, guid: d0cf85aef69554d71bb3c3b8323a463a, type: 3}
