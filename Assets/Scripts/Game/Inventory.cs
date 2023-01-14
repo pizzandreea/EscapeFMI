@@ -61,7 +61,6 @@ namespace Game
 
         public void Clear()
         {
-            Debug.Log("clearrr");
             _items.Clear();
             shouldUpdateUI = true;
         }
