@@ -1,3 +1,4 @@
+using System;
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,7 +11,7 @@ namespace Game
         public static GameManager Instance;
 
         public Inventory inventory;
-        public bool isGameOver;
+        public Boolean isGameOver;
 
         private void Awake()
         {
@@ -30,8 +31,8 @@ namespace Game
         public void Restart()
         {
             inventory.Clear();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             isGameOver = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

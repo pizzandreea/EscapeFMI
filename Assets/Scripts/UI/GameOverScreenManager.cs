@@ -15,13 +15,13 @@ namespace UI
         {
             if (GameManager.Instance.isGameOver != _lastHandledGameOverState)
             {
-                Debug.Log("da" + gameOverScreen + GameManager.Instance.isGameOver);
                 gameOverScreen.SetActive(GameManager.Instance.isGameOver);
             }
             if (GameManager.Instance.isGameOver)
             {
                 HandleRestartKey();
             }
+            
             _lastHandledGameOverState = GameManager.Instance.isGameOver;
         }
 
