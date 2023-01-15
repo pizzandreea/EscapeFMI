@@ -1545,48 +1545,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door1
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 384
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56fa15409e8ad2d48b63eef15b81e5c9
-      internalID: 226987109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Door2
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 368
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a37ef1580cb3e3542aba316c84583d22
-      internalID: -2040752064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Desk1
       rect:
         serializedVersion: 2
@@ -2687,7 +2645,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2708,7 +2666,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2716,6 +2674,48 @@ TextureImporter:
       bones: []
       spriteID: 5f011f76cd434dd4599303bb6dde83a1
       internalID: 899085946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorClosed
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 368
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e8c5b37734bc64a8fe4e976105dc5a
+      internalID: 1115611838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorOpen
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 272
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1e2686341642845a4b880021bd322b
+      internalID: 865789998
       vertices: []
       indices: 
       edges: []
@@ -2787,10 +2787,10 @@ TextureImporter:
       WindowDark1: -821940219
       WindowLight2: -2015681300
       Board3: 2137290235
-      WallHall9: -177949466
-      WallShort6: 1828125121
-      WallHallOld2: -2144965861
       Chimney1: -1386084923
+      Board2: -643799454
+      WallHallOld2: -2144965861
+      WallHall9: -177949466
       Floor8: -1729476418
       Desk4: -1440858555
       Bookshelf5: -1431014303
@@ -2804,6 +2804,7 @@ TextureImporter:
       WallB7: 1644737270
       Shadow1: 75374103
       FloorBorder2: -2112090309
+      DoorClosed: 1115611838
       Vent: 617633809
       Board8: 696522746
       WallB8: 1525877043
@@ -2814,7 +2815,7 @@ TextureImporter:
       Floor21: -130383452
       Floor10: 526739553
       FloorSteps2: -489498180
-      Board2: -643799454
+      WallShort6: 1828125121
       FloorBroken1: 1691190853
       Desk2: -1927117921
       Table2: 1403189538
@@ -2849,6 +2850,7 @@ TextureImporter:
       YellowWall3: 466156196
       WallShort4: -1968808263
       WallHall4: -189090726
+      DoorOpen: 865789998
       Shadow2: -1051155934
       Desk6: -1728658522
       WallHallOld6: -1773974445

@@ -4,9 +4,9 @@ namespace Game
 {
     public class Player : MonoBehaviour
     {
-        private const float RunningSpeed = 1.0f;
-        private const float NormalSpeed = 0.6f;
-        private const float SneakingSpeed = 0.3f;
+        private const float RunningSpeed = 0.6f;
+        private const float NormalSpeed = 0.3f;
+        private const float SneakingSpeed = 0.15f;
 
         private BoxCollider2D _boxCollider;
         private float _movementSpeed = NormalSpeed;

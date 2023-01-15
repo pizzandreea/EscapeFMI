@@ -27,9 +27,7 @@ namespace Game
             //Destroy(gameObject);
             if (gameObject != null)
             {
-
                 gameObject.SetActive(false);
-
             }
 
         }
