@@ -10,6 +10,8 @@ public class NPC : MonoBehaviour
     public Player player;
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
+    public GameObject controlsPanel;
+    public GameObject continueButton;
     public string[] dialogue;
     private int index = 0;
 
@@ -19,7 +21,7 @@ public class NPC : MonoBehaviour
     {
         dialogueText.text = "";
     }
-    
+
     public void RemoveText()
     {
         dialogueText.text = "";
@@ -53,8 +55,10 @@ public class NPC : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
+            controlsPanel.SetActive(false);
             dialoguePanel.SetActive(true);
             StartCoroutine(Typing());
+            continueButton.SetActive(true);
         }
     }
 
@@ -63,6 +67,23 @@ public class NPC : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             RemoveText();
+            continueButton.SetActive(false);
         }
+    }
+
+    public void DisplayControls()
+    {
+        dialogueText.text = "";
+        index = 0;
+        controlsPanel.SetActive(true);
+        continueButton.SetActive(false);
+    }
+
+    public void CloseControlsPanel()
+    {
+        controlsPanel.SetActive(false);
+        dialoguePanel.SetActive(true);
+        StartCoroutine(Typing());
+        continueButton.SetActive(true);
     }
 }
