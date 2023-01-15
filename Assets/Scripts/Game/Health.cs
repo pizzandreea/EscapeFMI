@@ -11,12 +11,11 @@ namespace Game
         private readonly Color _healColor = new(0.13f, 0.87f, 0.22f, 1.0f);
         private const float CriticalHitScale = 1.2f;
 
-        public int maxHealth = 100;
         public UnityEvent onDeath;
-
+        public int maxHealth = 100;
         public int health;
 
-        void Start()
+        private void Awake()
         {
             health = maxHealth;
         }
@@ -38,7 +37,7 @@ namespace Game
                 PopupText.Create(transform.position, damage.ToString(), _damageColorCritical, CriticalHitScale);
             }
 
-            if (health == 0)
+            if (health <= 0)
             {
                 onDeath.Invoke();
             }

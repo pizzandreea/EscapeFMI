@@ -19,6 +19,7 @@ namespace Game
 
         protected virtual void Update()
         {
+
             _boxCollider.OverlapCollider(filter, _collisionHits);
 
             foreach (var collider in _collisionHits)

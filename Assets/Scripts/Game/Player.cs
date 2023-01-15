@@ -9,7 +9,6 @@ namespace Game
         private const float SneakingSpeed = 0.3f;
 
         private BoxCollider2D _boxCollider;
-
         private float _movementSpeed = NormalSpeed;
         private Vector3 _moveDelta;
         private RaycastHit2D _hit;
@@ -26,6 +25,11 @@ namespace Game
         // Update is called once per frame
         private void FixedUpdate()
         {
+            if (GameManager.Instance.isGameOver)
+            {
+                return;
+            }
+
             var x = Input.GetAxisRaw("Horizontal");
             var y = Input.GetAxisRaw("Vertical");
 
@@ -74,10 +78,13 @@ namespace Game
             }
         }
 
-
-        // Moving
         private void Update()
         {
+            if (GameManager.Instance.isGameOver)
+            {
+                return;
+            }
+            
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 _movementSpeed = RunningSpeed;
@@ -91,10 +98,10 @@ namespace Game
                 _movementSpeed = NormalSpeed;
             }
         }
-        
-        public void HandleDeath()
+
+        private void HandleDeath()
         {
-            // TODO - trigger restart screen
+            GameManager.Instance.isGameOver = true;
         }
     }
 }

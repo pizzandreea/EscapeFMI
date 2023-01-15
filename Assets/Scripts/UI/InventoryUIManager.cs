@@ -7,16 +7,28 @@ namespace UI
 {
     public class InventoryUIManager : MonoBehaviour
     {
-        public GameObject InventoryUIRowPrefab;
         private GameObject _inventoryUI;
 
-        public void Start()
+        private void Awake()
         {
             _inventoryUI = GameObject.Find("InventoryUI");
+        }
+
+        private void Start()
+        {
             CreateInventoryUI();
         }
 
-        public void HandleInventoryUpdate()
+        private void Update()
+        {
+            if (GameManager.Instance.inventory.shouldUpdateUI)
+            {
+                HandleInventoryUpdate();
+                GameManager.Instance.inventory.shouldUpdateUI = false;
+            }
+        }
+
+        private void HandleInventoryUpdate()
         {
             ClearInventoryUI();
             CreateInventoryUI();
@@ -26,16 +38,19 @@ namespace UI
         {
             foreach (Transform child in _inventoryUI.transform)
             {
-                Destroy(child.gameObject);
+                if (child != null && child.gameObject != null)
+                {
+                    child.gameObject.SetActive(false);
+                }
             }
         }
 
         private void CreateInventoryUI()
         {
-            int rowIndex = 0;
-            foreach (var itemName in GameManager.Instance.Inventory.Items.Keys)
+            var rowIndex = 0;
+            foreach (var itemName in GameManager.Instance.inventory.GetItems().Keys)
             {
-                var item = GameManager.Instance.Inventory.Items[itemName];
+                var item = GameManager.Instance.inventory.GetItems()[itemName];
 
                 CreateInventoryUIRow(item.Sprite, item.Quantity, rowIndex);
 
@@ -45,15 +60,15 @@ namespace UI
 
         private void CreateInventoryUIRow(Sprite sprite, int quantity, int rowIndex)
         {
-            var prefabRectTransform = InventoryUIRowPrefab.GetComponent<RectTransform>();
+            var prefabRectTransform = GameAssets.instance.pfInventoryUIRow.GetComponent<RectTransform>();
             var prefabPosition = _inventoryUI.transform.position;
-            
+
             var rowPosition = new Vector3(prefabPosition.x,
                 prefabPosition.y - rowIndex * prefabRectTransform.rect.height, prefabPosition.z
             );
-            
+
             var inventoryUIRow = Instantiate(
-                InventoryUIRowPrefab, rowPosition, Quaternion.identity, _inventoryUI.transform
+                GameAssets.instance.pfInventoryUIRow, rowPosition, Quaternion.identity, _inventoryUI.transform
             );
             foreach (Transform transform in inventoryUIRow.transform)
             {
