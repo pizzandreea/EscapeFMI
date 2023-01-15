@@ -2687,7 +2687,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2708,7 +2708,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2716,363 +2716,6 @@ TextureImporter:
       bones: []
       spriteID: 5f011f76cd434dd4599303bb6dde83a1
       internalID: 899085946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoorOpen1
-      rect:
-        serializedVersion: 2
-        x: 353
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ea4c8cb1ab3e8c4da4a8cf0f8f60865
-      internalID: 1237410374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoorOpen2
-      rect:
-        serializedVersion: 2
-        x: 353
-        y: 272
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd9c53106312e6944b93f58249bcd9c5
-      internalID: 104265785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rug1
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 832
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6344208316ade8d4384a7c442b7fa691
-      internalID: 1202130338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rug2
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 832
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3d8fb77e028f3047968f285a77bdb4c
-      internalID: -397975341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rug3
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 832
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d4f9863c95326a4f95ed826be1b8016
-      internalID: -1349326315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rug4
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 816
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 449847c70e3a19c4ea97c5c232f7a6e8
-      internalID: 204055297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rug5
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 816
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0b4ed8de6ea62545a9a5bb8652bd101
-      internalID: -1677157293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rug6
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 816
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 381d333025af80d44a295563a2153615
-      internalID: -1837096325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shelf1
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2eb68f394a5d87b4c8835b745219b444
-      internalID: 907268199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shelf2
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7d33126e6998794388ed6054b796e6f
-      internalID: 1618170833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shelf3
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab6969394d9239e42b326f4dbbc15e4e
-      internalID: -1221032809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shelf4
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3777d770626f62a4baad147d0fa509c8
-      internalID: -15374738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shelf5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dfbe215c09cc6cf44ade26159c682f7a
-      internalID: 1465827220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shelf6
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2bc4b3ce46ae544cafa133a997128cc
-      internalID: 1776878519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shelf7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a558cf0c0837cc143b3ff861df9070ef
-      internalID: 387820280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shelf8
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 364b16704dbc67b4ba3682b080cf5b5d
-      internalID: -931669916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shelf9
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5863202b8d481c24987e1c8237a7561c
-      internalID: 1157053487
       vertices: []
       indices: 
       edges: []
@@ -3090,8 +2733,6 @@ TextureImporter:
     nameFileIdTable:
       Floor3: -1592596527
       Floor7: -157766973
-      Rug3: -1349326315
-      Shelf1: 907268199
       WallShort7: -1484050197
       WallHall1: -659700689
       Bookshelf3: -2141096584
@@ -3099,7 +2740,6 @@ TextureImporter:
       Floor19: 199504083
       Painting2: 762800402
       WallB5: 1384409845
-      Shelf8: -931669916
       Floor6: -771274836
       WallHall10: -1985696056
       YellowWall1: 933498702
@@ -3107,7 +2747,6 @@ TextureImporter:
       WallHall6: 345341605
       SpiderWeb: -22580892
       Bookshelf6: 776249350
-      Shelf9: 1157053487
       FloorSteps1: 1060261008
       WallHallOld3: 616026250
       Laptop: 429585183
@@ -3115,11 +2754,8 @@ TextureImporter:
       Table4: -594232626
       Bench3: 1722774071
       Floor11: 885997539
-      Shelf6: 1776878519
       Board9: 1329070982
-      Rug2: -397975341
       Floor14: 543829660
-      DoorOpen1: 1237410374
       Floor12: 2145930722
       Board4: -755399725
       Floor4: -1800354328
@@ -3134,14 +2770,12 @@ TextureImporter:
       Table1: -2119644166
       WallHall12: -1026395717
       Board6: -1654978576
-      Shelf3: -1221032809
       Floor1: 1837787233
       WallHall13: 278391789
       WallHallOld5: -1467110970
       WallShort3: -978813491
       Floor18: 1276001007
       Ladder1: 584492679
-      Shelf5: 1465827220
       WallHall8: -1273960775
       Desk1: -1996915460
       Painting1: -1181241258
@@ -3153,9 +2787,10 @@ TextureImporter:
       WindowDark1: -821940219
       WindowLight2: -2015681300
       Board3: 2137290235
-      Chimney1: -1386084923
       WallHall9: -177949466
+      WallShort6: 1828125121
       WallHallOld2: -2144965861
+      Chimney1: -1386084923
       Floor8: -1729476418
       Desk4: -1440858555
       Bookshelf5: -1431014303
@@ -3164,7 +2799,6 @@ TextureImporter:
       WallB6: -1806223150
       WallB4: -820582121
       Bookshelf2: 1409013843
-      DoorOpen2: 1237410374
       WallB1: 1000728880
       WallHallOld4: -1226809008
       WallB7: 1644737270
@@ -3179,12 +2813,10 @@ TextureImporter:
       WallShort5: 1008729449
       Floor21: -130383452
       Floor10: 526739553
-      Rug4: 204055297
       FloorSteps2: -489498180
       Board2: -643799454
       FloorBroken1: 1691190853
       Desk2: -1927117921
-      WallShort6: 1828125121
       Table2: 1403189538
       Floor17: 86099622
       WallHall14: -1388645746
@@ -3201,7 +2833,6 @@ TextureImporter:
       WindowLight3: 757302787
       WindowLight4: 1724513406
       FloorBroken2: -622615639
-      Shelf7: 387820280
       Desk5: 1050152972
       WallB3: 1528588499
       Green1: 742666732
@@ -3218,17 +2849,12 @@ TextureImporter:
       YellowWall3: 466156196
       WallShort4: -1968808263
       WallHall4: -189090726
-      Shelf2: 1618170833
       Shadow2: -1051155934
-      Rug5: -1677157293
       Desk6: -1728658522
       WallHallOld6: -1773974445
       Desk3: -657298923
       Door1: 226987109
       WallB2: -1896193314
-      Rug1: 1202130338
-      Rug6: -1837096325
-      Shelf4: -15374738
       Chimney2: -712383914
   spritePackingTag: 
   pSDRemoveMatte: 0
