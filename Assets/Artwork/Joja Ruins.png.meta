@@ -276,8 +276,8 @@ TextureImporter:
       name: Wall3
       rect:
         serializedVersion: 2
-        x: 2
-        y: 159
+        x: 135
+        y: 152
         width: 16
         height: 16
       alignment: 0
@@ -822,10 +822,10 @@ TextureImporter:
       name: Rock9
       rect:
         serializedVersion: 2
-        x: 111
+        x: 106
         y: 89
-        width: 10
-        height: 8
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1343,27 +1343,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Joja Ruins_0
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 75
-        width: 11
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0abc97b754ca16243a19becc71afe3df
-      internalID: -2002866419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1377,7 +1356,6 @@ TextureImporter:
     nameFileIdTable:
       Rock2: 1695609062
       Rock3: 1615552715
-      Joja Ruins_0: -2002866419
       TopWall4: 583697187
       Box2: -1957387388
       Floor_1_8: 1351619425
