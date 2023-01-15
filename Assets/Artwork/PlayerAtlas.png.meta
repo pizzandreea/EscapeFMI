@@ -158,48 +158,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: PlayerAtlas_0
-      rect:
-        serializedVersion: 2
-        x: 433
-        y: 368
-        width: 2
-        height: 2
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d59caf26d9ae31d4f953417aed771bc0
-      internalID: -1073673967
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy1
-      rect:
-        serializedVersion: 2
-        x: 429
-        y: 357
-        width: 10
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c82b79caa06932a4d994418a913716a6
-      internalID: 652389950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -211,8 +169,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Enemy1: 652389950
-      PlayerAtlas_0: -1073673967
       player_0: 1123308202
       PlayerAtlas_1: -1240036168
   spritePackingTag: 
