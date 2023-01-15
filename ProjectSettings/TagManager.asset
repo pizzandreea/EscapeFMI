@@ -11,12 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - Floor1
   - Blocking
   - Item
   - Actor
-  - 
+  - Bullet
   - 
   - 
   - 
@@ -53,8 +53,14 @@ TagManager:
   - name: Actor
     uniqueID: 1197640299
     locked: 0
+  - name: Weapons
+    uniqueID: 1503752069
+    locked: 0
   - name: Shadows
     uniqueID: 2511343333
+    locked: 0
+  - name: Prefab
+    uniqueID: 3605308203
     locked: 0
   - name: PopupText
     uniqueID: 2820137445

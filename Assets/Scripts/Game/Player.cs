@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game
@@ -13,10 +15,17 @@ namespace Game
         private Vector3 _moveDelta;
         private RaycastHit2D _hit;
 
+        private Rigidbody2D rb;
+        private Camera cam;
+
+        Vector2 movement;
+        Vector2 mousePos;
+
         // Start is called before the first frame update
         private void Start()
         {
             _boxCollider = GetComponent<BoxCollider2D>();
+            rb = GetComponent<Rigidbody2D>();
         }
 
         // Update is called once per frame
@@ -29,6 +38,9 @@ namespace Game
 
             var x = Input.GetAxisRaw("Horizontal");
             var y = Input.GetAxisRaw("Vertical");
+
+            cam = Camera.main;
+            mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
             // Reset moveDelta
             _moveDelta = new Vector3(x, y, 0);
@@ -57,6 +69,14 @@ namespace Game
             {
                 transform.Translate(_movementSpeed * _moveDelta.x * Time.deltaTime, 0, 0);
             }
+
+            // Player orientation
+
+            var playerPos = new Vector2(transform.position.x, transform.position.y);
+            Vector2 lookDir = mousePos - playerPos;
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+            //rb.rotation = angle;
+
         }
 
         private void Update()
