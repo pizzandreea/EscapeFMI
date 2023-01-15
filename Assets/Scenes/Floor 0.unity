@@ -3094,7 +3094,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 807989491}
         m_TargetAssemblyTypeName: NPC, Assembly-CSharp
-        m_MethodName: CloseControlSettings
+        m_MethodName: CloseControlsPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4093,6 +4093,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1930342936}
   dialogueText: {fileID: 1687477456}
   controlsPanel: {fileID: 1793453403}
+  continueButton: {fileID: 1389974838}
   dialogue:
   - Hello, Student!
   - FMI held you captive here for 3 years. It's time to escape!
