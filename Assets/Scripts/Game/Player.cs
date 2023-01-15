@@ -13,10 +13,13 @@ namespace Game
         private Vector3 _moveDelta;
         private RaycastHit2D _hit;
 
+        public Animator animator;
+
         // Start is called before the first frame update
         private void Start()
         {
             _boxCollider = GetComponent<BoxCollider2D>();
+            animator = GetComponent<Animator>();
         }
 
         // Update is called once per frame
@@ -36,12 +39,28 @@ namespace Game
             // Swap sprite direction, right or left
             if (_moveDelta.x > 0)
             {
+                animator.SetBool("isMovingX", true);
                 transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+
             }
             else if (_moveDelta.x < 0)
             {
+                animator.SetBool("isMovingX", true);
                 transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
             }
+            else
+                animator.SetBool("isMovingX", false);
+
+            if (_moveDelta.y > 0 )
+                animator.SetBool("isMovingUp", true);
+            else
+                animator.SetBool("isMovingUp", false);
+
+            if(_moveDelta.y < 0)
+                animator.SetBool("isMovingDown", true);
+            else
+                animator.SetBool("isMovingDown", false);
+
 
             // Make sure nothing is blocking
             _hit = Physics2D.BoxCast(transform.position, _boxCollider.size, 0, new Vector2(0, _moveDelta.y),

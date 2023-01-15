@@ -14,6 +14,8 @@ namespace Game
         private AIPath _aiPath;
         private float _attackTimer;
 
+        public Animator animator;
+
         private void Awake()
         {
             _playerHealth = GameObject.Find("Player").GetComponent<Health>();
@@ -24,6 +26,36 @@ namespace Game
         private void Update()
         {
             _attackTimer -= Time.deltaTime;
+            // Moving Up
+            if (_aiPath.desiredVelocity.y > 0.0f)
+                animator.SetBool("isMovingUp", true);
+            else if (_aiPath.desiredVelocity.y < 0.0f)
+                animator.SetBool("isMovingUp", false);
+
+            //Moving down
+            if (_aiPath.desiredVelocity.y < -0.0f)
+                animator.SetBool("isMovingDown", true);
+            else if (_aiPath.desiredVelocity.y > 0.0f)
+                animator.SetBool("isMovingDown", false);
+
+            // Moving Right
+            if (_aiPath.desiredVelocity.x > 0.0f)
+                animator.SetBool("isMovingRight", true);
+            else if (_aiPath.desiredVelocity.x < 0.0f)
+                animator.SetBool("isMovingRight", false);
+
+            // Moving Left
+            if (_aiPath.desiredVelocity.x < -0.0f)
+                animator.SetBool("isMovingLeft", true);
+            else if (_aiPath.desiredVelocity.x > 0.0f)
+                animator.SetBool("isMovingLeft", false);
+
+
+
+
+
+
+
         }
 
         public void HandleCollision(Collider2D collider)
