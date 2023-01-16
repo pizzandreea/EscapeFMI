@@ -33,7 +33,7 @@ namespace Game
             }
         }
 
-        private bool HasItem(string name)
+        public bool HasItem(string name)
         {
             if (!_items.ContainsKey(name))
             {
@@ -43,7 +43,7 @@ namespace Game
             return _items[name].Quantity > 0;
         }
 
-        private void UseItem(string name)
+        public void UseItem(string name)
         {
             if (!HasItem(name))
             {
