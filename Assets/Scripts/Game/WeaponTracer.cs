@@ -9,7 +9,8 @@ public class WeaponTracer : MonoBehaviour
 
     public float bulletForce = 10f;
 
-    [SerializeField] private PlayerAimWeapon playerAimWeapon;
+    [SerializeField] 
+    private PlayerAimWeapon playerAimWeapon;
     // Start is called before the first frame update
     void Start()
     {
