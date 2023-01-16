@@ -43,14 +43,11 @@ namespace Game
             {
                 if (_inventory.HasItem("Key"))
                 {
-                    Debug.Log("am cheie");
-                    
                     waitingToOpen = true;
                     StartCoroutine(SendNotification("Press E to open the door", 3));
                 }
                 else
                 {
-                    Debug.Log("NU am cheie");
                     StartCoroutine(SendNotification("You need a key to unlock the door", 3));
                 }
             }
