@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e36ab3a979ab2f44bf13de5c4da02b8
+guid: 24dfe371024c4d4419e97658369a2b46
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -105,13 +105,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy1
+      name: BowSprite
       rect:
         serializedVersion: 2
-        x: 40
-        y: 358
-        width: 10
-        height: 16
+        x: 128
+        y: 32
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba58c9c41ac848043ae767da2c83dfc6
+      internalID: 2110477267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_epicweapons_pack1_nobg_0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +140,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d5e1d1c66ed0194ba5913dd39f6f777
-      internalID: 416741454
+      spriteID: 35287bec1a5903340914c1d31241ecfa
+      internalID: 871834647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArrowSprite
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 37
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974a660509249bc4e832bb8cbadd0ef8
+      internalID: -1211351656
       vertices: []
       indices: 
       edges: []
@@ -136,7 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Enemy1: 416741454
+      BowSprite: 2110477267
+      fantasy_epicweapons_pack1_nobg_0: 871834647
+      ArrowSprite: -1211351656
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
