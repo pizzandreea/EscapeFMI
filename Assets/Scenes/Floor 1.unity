@@ -132,11 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5259214604951313667, guid: f2d1e374fc49844a6967051bc6c76175, type: 3}
       propertyPath: m_Name
-      value: Key
+      value: pfKey (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5259214604951313694, guid: f2d1e374fc49844a6967051bc6c76175, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5259214604951313694, guid: f2d1e374fc49844a6967051bc6c76175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -251,7 +251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 127953329}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,8 +356,7 @@ Transform:
   m_LocalPosition: {x: -2.0449998, y: 0.705, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1575274167}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2798,7 +2797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 666792475}
   - component: {fileID: 666792476}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3069,7 +3068,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 4294967295
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3089,7 +3088,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 4294967295
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3259,7 +3258,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5259214604951313667, guid: f2d1e374fc49844a6967051bc6c76175, type: 3}
       propertyPath: m_Name
-      value: Key
+      value: pfKey
       objectReference: {fileID: 0}
     - target: {fileID: 5259214604951313694, guid: f2d1e374fc49844a6967051bc6c76175, type: 3}
       propertyPath: m_RootOrder
@@ -3722,7 +3721,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 27
-      m_TileSpriteIndex: 4294967295
+      m_TileSpriteIndex: 27
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3872,7 +3871,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 27
-      m_TileSpriteIndex: 4294967295
+      m_TileSpriteIndex: 27
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7534,7 +7533,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1113912486}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: GunPointPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7867,7 +7866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399663027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.098, y: 0.996, z: -9.8808565}
+  m_LocalPosition: {x: 0.024000704, y: 1.0235618, z: -9.8808565}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8020,7 +8019,7 @@ GameObject:
   - component: {fileID: 1436115927}
   - component: {fileID: 1436115926}
   m_Layer: 10
-  m_Name: Enemy spawner 1
+  m_Name: Enemy spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8038,10 +8037,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932bafa1425be114085f38037202a890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xStart: -1.39
-  yStart: 1.5
-  xEnd: -0.37
-  yEnd: 1.15
+  xStart: 0
+  yStart: 1
+  xEnd: 1
+  yEnd: 1.5
   enemyPrefab: {fileID: 5339946097691219901, guid: 98db6b199b46e6a4ba94d211b725c819, type: 3}
   enemyInterval: 1
   enemiesNumber: 5
@@ -8952,7 +8951,7 @@ GameObject:
   - component: {fileID: 1900230277}
   - component: {fileID: 1900230276}
   - component: {fileID: 1900230274}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
