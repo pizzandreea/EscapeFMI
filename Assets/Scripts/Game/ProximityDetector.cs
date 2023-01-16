@@ -36,7 +36,7 @@ namespace Game
 
             foreach (var collider in _inProximity)
             {
-                if (!_proximityHits.Contains(collider))
+                if (!_proximityHits.Contains(collider) && collider != null)
                 {
                     leftProximity.Add(collider);
                 }

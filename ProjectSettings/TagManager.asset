@@ -11,12 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - Floor1
   - Blocking
   - Item
   - Actor
-  - 
+  - Bullet
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Weapon
     uniqueID: 2303616987
+    locked: 0
+  - name: Bullet
+    uniqueID: 1703477941
     locked: 0
   - name: Shadows
     uniqueID: 2511343333
