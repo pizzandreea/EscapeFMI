@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using TMPro;
+using UnityEngine;
 
 namespace Game
 {
@@ -9,6 +11,7 @@ namespace Game
         public Sprite doorOpenSprite;
 
         public bool doorOpen, waitingToOpen;
+        public TextMeshProUGUI notificationText;
         
         public void Start()
         {
@@ -36,13 +39,25 @@ namespace Game
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("Player") && !doorOpen)
             {
                 if (_inventory.HasItem("Key"))
                 {
                     waitingToOpen = true;
+                    StartCoroutine(SendNotification("Press E to open the door", 3));
+                }
+                else
+                {
+                    StartCoroutine(SendNotification("You need a key to unlock the door", 3));
                 }
             }
+        }
+
+        private IEnumerator SendNotification(string text, int time)
+        {
+            notificationText.text = text;
+            yield return new WaitForSeconds(time);
+            notificationText.text = "";
         }
     }
 }
