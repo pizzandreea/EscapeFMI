@@ -12,6 +12,9 @@ namespace Game
 
         public bool doorOpen, waitingToOpen;
         public TextMeshProUGUI notificationText;
+
+        [SerializeField]
+        private AudioSource openDoor;
         
         public void Start()
         {
@@ -24,10 +27,11 @@ namespace Game
             {
                 if (Input.GetKey(KeyCode.E))
                 {
+                    openDoor.Play();
                     waitingToOpen = false;
                     doorOpen = true;
                     spriteRenderer.sprite = doorOpenSprite;
-                    
+   
                     _inventory.UseItem("Key");
                 }
             }
