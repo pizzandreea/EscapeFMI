@@ -87,9 +87,6 @@ namespace Game
             }
             if (isWalkingUp == true || isWalkingDown == true || isWalkingX == true)
             {
-                Debug.Log(isWalkingX);
-                Debug.Log(isWalkingDown);
-                Debug.Log(isWalkingUp);
                 if (!walk.isPlaying)
                         walk.Play();
             }
