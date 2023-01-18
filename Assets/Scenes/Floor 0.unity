@@ -6332,7 +6332,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -11184,7 +11184,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e5b0a115f96c91243861c3607530f1e8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13044,6 +13044,10 @@ PrefabInstance:
     - target: {fileID: 2294535484796301658, guid: 7d10311470946bd429a5e3a4e2634771, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294535484796301659, guid: 7d10311470946bd429a5e3a4e2634771, type: 3}
+      propertyPath: goToNextLevel
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2294535484796301659, guid: 7d10311470946bd429a5e3a4e2634771, type: 3}
       propertyPath: notificationText

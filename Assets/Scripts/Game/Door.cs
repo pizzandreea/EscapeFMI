@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -12,6 +13,7 @@ namespace Game
 
         public bool doorOpen, waitingToOpen;
         public TextMeshProUGUI notificationText;
+        public bool goToNextLevel;
 
         [SerializeField]
         private AudioSource openDoor;
@@ -33,6 +35,15 @@ namespace Game
                     spriteRenderer.sprite = doorOpenSprite;
    
                     _inventory.UseItem("Key");
+
+                    if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") == 1)
+                    {
+                        Invoke(nameof(GoToNextLevel), 1.0f);
+                    }
+                    else if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") < 1)
+                    {
+                        StartCoroutine(SendNotification("Make sure to take all the keys before moving to the next level", 3));
+                    }
                 }
             }
             else if (doorOpen)
@@ -55,6 +66,17 @@ namespace Game
                     StartCoroutine(SendNotification("You need a key to unlock the door", 3));
                 }
             }
+            else if (doorOpen)
+            {
+                if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") == 1)
+                {
+                    Invoke(nameof(GoToNextLevel), 1.0f);
+                }
+                else if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") < 1)
+                {
+                    StartCoroutine(SendNotification("Make sure to take all the keys before moving to the next level", 3));
+                }
+            }
         }
 
         private IEnumerator SendNotification(string text, int time)
@@ -62,6 +84,11 @@ namespace Game
             notificationText.text = text;
             yield return new WaitForSeconds(time);
             notificationText.text = "";
+        }
+
+        private void GoToNextLevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
