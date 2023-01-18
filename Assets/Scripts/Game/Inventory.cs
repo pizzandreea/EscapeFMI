@@ -43,6 +43,16 @@ namespace Game
             return _items[name].Quantity > 0;
         }
 
+        public int ItemCount(string name)
+        {
+            if (!_items.ContainsKey(name))
+            {
+                return 0;
+            }
+
+            return _items[name].Quantity;
+        }
+
         public void UseItem(string name)
         {
             if (!HasItem(name))

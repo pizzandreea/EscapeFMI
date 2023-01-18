@@ -13,13 +13,12 @@ namespace Game
         private Vector3 _moveDelta;
         private RaycastHit2D _hit;
 
-        [SerializeField] 
+        [SerializeField]
         private AudioSource walk;
 
         private bool isWalkingX = false;
         private bool isWalkingUp = false;
         private bool isWalkingDown = false;
-
 
         public Animator animator;
 
