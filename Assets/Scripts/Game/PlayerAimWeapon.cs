@@ -9,6 +9,9 @@ public class PlayerAimWeapon : MonoBehaviour
     private Transform aimGunPointPosTransform;
     public event EventHandler<OnShootEventArgs> OnShoot;
 
+    [SerializeField]
+    private AudioSource shooting;
+
     public class OnShootEventArgs : EventArgs
     {
         public Vector3 gunPointPos;
@@ -44,12 +47,14 @@ public class PlayerAimWeapon : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if(!shooting.isPlaying)
+                shooting.Play();
             Vector3 mousePos = GetMousePos();
             OnShoot?.Invoke(this, new OnShootEventArgs
             {
                 gunPointPos = aimGunPointPosTransform.position,
                 shootPos = mousePos,
-            });
+            }); 
         }
     }
 

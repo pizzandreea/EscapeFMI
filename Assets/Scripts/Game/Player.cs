@@ -13,6 +13,14 @@ namespace Game
         private Vector3 _moveDelta;
         private RaycastHit2D _hit;
 
+        [SerializeField] 
+        private AudioSource walk;
+
+        private bool isWalkingX = false;
+        private bool isWalkingUp = false;
+        private bool isWalkingDown = false;
+
+
         public Animator animator;
 
         // Start is called before the first frame update
@@ -39,27 +47,51 @@ namespace Game
             // Swap sprite direction, right or left
             if (_moveDelta.x > 0)
             {
+                isWalkingX = true;
                 animator.SetBool("isMovingX", true);
                 transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
             }
             else if (_moveDelta.x < 0)
             {
+                isWalkingX = true;
                 animator.SetBool("isMovingX", true);
                 transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
             }
             else
+            {
+                isWalkingX = false;
                 animator.SetBool("isMovingX", false);
+            }
 
             if (_moveDelta.y > 0 )
+            {
+                isWalkingUp = true;
                 animator.SetBool("isMovingUp", true);
+            }
             else
+            {
+                isWalkingUp = false;
                 animator.SetBool("isMovingUp", false);
+            }
 
             if(_moveDelta.y < 0)
+            {
+                isWalkingDown = true;
                 animator.SetBool("isMovingDown", true);
+            }
             else
+            {
+                isWalkingDown = false;
                 animator.SetBool("isMovingDown", false);
+            }
+            if (isWalkingUp == true || isWalkingDown == true || isWalkingX == true)
+            {
+                if (!walk.isPlaying)
+                        walk.Play();
+            }
+            else if (isWalkingUp == false || isWalkingDown == false || isWalkingX == false)
+                walk.Stop();
 
 
             // Make sure nothing is blocking
