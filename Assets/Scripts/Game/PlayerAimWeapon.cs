@@ -9,6 +9,9 @@ public class PlayerAimWeapon : MonoBehaviour
     private Transform aimGunPointPosTransform;
     public event EventHandler<OnShootEventArgs> OnShoot;
 
+    public float fireRate = 0.7f;
+    private float nextFire = 0.0f;
+
     [SerializeField]
     private AudioSource shooting;
 
@@ -45,9 +48,10 @@ public class PlayerAimWeapon : MonoBehaviour
 
     void Shooting()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.time > nextFire)
         {
-            if(!shooting.isPlaying)
+            nextFire = Time.time + fireRate;
+            if (!shooting.isPlaying)
                 shooting.Play();
             Vector3 mousePos = GetMousePos();
             OnShoot?.Invoke(this, new OnShootEventArgs

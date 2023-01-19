@@ -11,7 +11,12 @@ public class CollisionDestroy : MonoBehaviour
         }
         if (collision.gameObject.layer == 10) {
             Game.Health healthScript = collision.gameObject.GetComponent<Game.Health>();
-            healthScript.TakeDamage(35,false);
+            healthScript.TakeDamage(25,false);
+            if(healthScript.health <= 0) {
+                Destroy(collision.gameObject);
+            }
+                
+
         }
     }
 }
