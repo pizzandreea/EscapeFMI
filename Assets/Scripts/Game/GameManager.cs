@@ -12,7 +12,7 @@ namespace Game
 
         public Inventory inventory;
         public Boolean isGameOver;
-
+        public SoundManager soundManager;
         private void Awake()
         {
             // Make sure we don't end up with more GameManagers in the "Don't destroy on load" scene
@@ -25,6 +25,7 @@ namespace Game
 
             Instance = this;
             inventory = GetComponent<Inventory>();
+            soundManager = GetComponent<SoundManager>();
             DontDestroyOnLoad(gameObject);
         }
 
