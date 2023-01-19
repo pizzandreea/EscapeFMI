@@ -32,7 +32,7 @@ namespace Game
         {
             inventory.Clear();
             isGameOver = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("Floor 0");
         }
     }
 }
