@@ -35,6 +35,7 @@ namespace Game
                     spriteRenderer.sprite = doorOpenSprite;
    
                     _inventory.UseItem("Key");
+                    gameObject.layer = 7;
 
                     if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") == 1)
                     {
