@@ -33,7 +33,7 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 1; i <= enemiesNumber; i++)
         {
-            var pos = new Vector3(Random.Range(-xStart, xEnd), Random.Range(-yStart, yEnd), 0);
+            var pos = new Vector3(Random.Range(xStart, xEnd), Random.Range(yStart, yEnd), 0);
             spawnEnemy(enemyInterval, enemyPrefab, pos);
         }
     }
