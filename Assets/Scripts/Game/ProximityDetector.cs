@@ -10,13 +10,14 @@ namespace Game
         public UnityEvent<Collider2D> onEnterProximity;
         public UnityEvent<Collider2D> onLeaveProximity;
 
+        [SerializeField]
         private CircleCollider2D _proximityCollider2D;
         private readonly List<Collider2D> _proximityHits = new();
         private readonly HashSet<Collider2D> _inProximity = new();
 
         protected virtual void Start()
         {
-            _proximityCollider2D = GetComponent<CircleCollider2D>();
+            //_proximityCollider2D = GetComponent<CircleCollider2D>();
         }
 
         protected virtual void Update()

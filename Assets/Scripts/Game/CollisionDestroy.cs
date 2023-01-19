@@ -6,7 +6,7 @@ public class CollisionDestroy : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision) {
         Debug.Log("coll");
-        if (collision.gameObject.layer != 6 && collision.gameObject.layer != 11  && !(collision.collider is CircleCollider2D)) { 
+        if (collision.gameObject.layer != 6 && collision.gameObject.layer != 11  && collision.gameObject.layer != 12) { 
             Destroy(gameObject);
         }
     }
