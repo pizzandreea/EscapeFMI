@@ -5487,7 +5487,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Controls\n\nArrows - move \nShift - run faster\nE - Pick up gun\n"
+  m_text: 'Controls
+
+
+    WASD - Move/Walk
+
+    Shift - Run
+
+    Ctrl - Sneak
+
+    E
+    - Perform Action
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 381c79f8ddc784e2f9bb4ad9e9e5d46f, type: 2}
   m_sharedMaterial: {fileID: 1202633797054757, guid: 381c79f8ddc784e2f9bb4ad9e9e5d46f, type: 2}
