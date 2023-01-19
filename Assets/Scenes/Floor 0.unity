@@ -2769,7 +2769,6 @@ GameObject:
   - component: {fileID: 320629270}
   - component: {fileID: 320629269}
   - component: {fileID: 320629268}
-  - component: {fileID: 320629271}
   - component: {fileID: 320629267}
   - component: {fileID: 320629266}
   - component: {fileID: 320629265}
@@ -2882,7 +2881,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _proximityCollider2D: {fileID: 0}
+  _proximityCollider2D: {fileID: 175727615}
 --- !u!114 &320629267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5056,7 +5055,8 @@ Transform:
   m_LocalPosition: {x: -3.294, y: 0.632, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 470832982}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5116,7 +5116,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _proximityCollider2D: {fileID: 0}
+  _proximityCollider2D: {fileID: 470832983}
 --- !u!114 &807989491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5138,22 +5138,6 @@ MonoBehaviour:
   - Hello, Student!
   - FMI held you captive here for 3 years. It's time to escape!
   wordSpeed: 0.03
---- !u!58 &807989492
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807989487}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.09
 --- !u!61 &807989493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7314,7 +7298,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c0f5786f639278d479c9da914217fdad, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
