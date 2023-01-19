@@ -50,12 +50,6 @@ namespace Game
             else if (_aiPath.desiredVelocity.x > 0.0f)
                 animator.SetBool("isMovingLeft", false);
 
-
-
-
-
-
-
         }
 
         public void HandleCollision(Collider2D collider)
