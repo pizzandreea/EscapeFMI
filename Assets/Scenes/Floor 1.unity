@@ -6732,6 +6732,7 @@ GameObject:
   - component: {fileID: 1013667951}
   - component: {fileID: 1013667950}
   - component: {fileID: 1013667949}
+  - component: {fileID: 1013667961}
   m_Layer: 10
   m_Name: Guardian
   m_TagString: Untagged
@@ -7049,7 +7050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f86c78d2694a49289807a9793df6316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 150
+  damage: 25
   criticalHitChance: 0.1
   delayBetweenAttacks: 1
   animator: {fileID: 1013667950}
@@ -7148,6 +7149,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1013667961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013667948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919f9c0c2ac5a4826a392889c290fca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  maxHealth: 100
+  health: 100
 --- !u!1 &1075681619
 GameObject:
   m_ObjectHideFlags: 0
