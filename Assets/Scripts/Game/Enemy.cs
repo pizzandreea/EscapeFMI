@@ -16,6 +16,8 @@ namespace Game
 
         public Animator animator;
 
+        [SerializeField] AudioSource awake;
+
         private void Awake()
         {
             _playerHealth = GameObject.Find("Player").GetComponent<Health>();
@@ -70,6 +72,7 @@ namespace Game
         {
             if (collider.CompareTag("Player"))
             {
+                awake.Play();
                 StartFollowingPlayer();
             }
         }
