@@ -21,8 +21,7 @@ namespace Game
             {
                 return;
             }
-
-            if ()
+            
             GameManager.Instance.inventory.PickUp(_item);
 
             //Destroy(gameObject);
