@@ -2654,7 +2654,7 @@ MonoBehaviour:
   criticalHitChance: 0.1
   delayBetweenAttacks: 1
   animator: {fileID: 320629275}
-  awake: {fileID: 0}
+  awake: {fileID: 320629276}
 --- !u!61 &320629268
 BoxCollider2D:
   m_ObjectHideFlags: 0
