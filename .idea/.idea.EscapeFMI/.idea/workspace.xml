@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d9327105-eb90-4cb9-8d64-76bfef8025bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EscapeFMI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EscapeFMI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor 0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor 0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameOverScreenManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameOverScreenManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Collectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Collectable.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
