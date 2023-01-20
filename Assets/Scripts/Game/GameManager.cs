@@ -35,5 +35,11 @@ namespace Game
             isGameOver = false;
             SceneManager.LoadScene("Floor 0");
         }
+
+        public void GoToMenu()
+        {
+            inventory.Clear();
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }

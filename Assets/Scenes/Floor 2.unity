@@ -3773,11 +3773,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5259214604951313694, guid: f2d1e374fc49844a6967051bc6c76175, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.125
+      value: 0.437
       objectReference: {fileID: 0}
     - target: {fileID: 5259214604951313694, guid: f2d1e374fc49844a6967051bc6c76175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.941
+      value: 4.388
       objectReference: {fileID: 0}
     - target: {fileID: 5259214604951313694, guid: f2d1e374fc49844a6967051bc6c76175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8897,7 +8897,7 @@ MonoBehaviour:
   yEnd: 4.273
   enemyPrefab: {fileID: 743495043}
   enemyInterval: 1
-  enemiesNumber: 0
+  enemiesNumber: 15
 --- !u!4 &947497457
 Transform:
   m_ObjectHideFlags: 0
@@ -10797,7 +10797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e2b5858b2b64f4c887ba67afa71a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 0}
+  volumeSlider: {fileID: 952260021}
 --- !u!4 &1257718745
 Transform:
   m_ObjectHideFlags: 0
@@ -11812,7 +11812,7 @@ MonoBehaviour:
   yEnd: 3.107
   enemyPrefab: {fileID: 743495043}
   enemyInterval: 1
-  enemiesNumber: 0
+  enemiesNumber: 15
 --- !u!4 &1607158912
 Transform:
   m_ObjectHideFlags: 0
@@ -12080,7 +12080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0.000045776367}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0.000061035156}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1655907192
@@ -12120,7 +12120,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.52648926, y: 2.6320953}
+  m_AnchoredPosition: {x: 0.52648926, y: 2.63208}
   m_SizeDelta: {x: 20.0042, y: 17.8985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1655907194
