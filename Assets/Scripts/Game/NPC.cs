@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
@@ -85,5 +86,10 @@ public class NPC : MonoBehaviour
         dialoguePanel.SetActive(true);
         StartCoroutine(Typing());
         continueButton.SetActive(true);
+    }
+    
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

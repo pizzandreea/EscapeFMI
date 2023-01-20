@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d9327105-eb90-4cb9-8d64-76bfef8025bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EscapeFMI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EscapeFMI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor 2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor 3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/NPC.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,7 @@
       <updated>1673795397377</updated>
       <workItem from="1673795406082" duration="11396000" />
       <workItem from="1674039556406" duration="5253000" />
-      <workItem from="1674203371732" duration="2026000" />
+      <workItem from="1674203371732" duration="4172000" />
     </task>
     <servers />
   </component>
