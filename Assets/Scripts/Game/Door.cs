@@ -37,11 +37,11 @@ namespace Game
                     _inventory.UseItem("Key");
                     gameObject.layer = 7;
 
-                    if (goToNextLevel && (GameManager.Instance.inventory.ItemCount("Key") == 1 || SceneManager.GetActiveScene().name != "Floor 0"))
+                    if (goToNextLevel && (GameManager.Instance.inventory.ItemCount("Key") >= 1 || SceneManager.GetActiveScene().name != "Floor 0"))
                     {
                         if (GameManager.Instance.inventory.ItemCount("Scroll") < GetScrollsCount())
                         {
-                            if (GameManager.Instance.inventory.ItemCount("Key") == 1)
+                            if (GameManager.Instance.inventory.ItemCount("Key") >= 1)
                             {
                                 StartCoroutine(SendNotification("You should take the scroll before moving to the next level", 3));
                             }
@@ -83,7 +83,7 @@ namespace Game
             }
             else if (doorOpen)
             {
-                if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") == 1)
+                if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") >= 1)
                 {
                     if (GameManager.Instance.inventory.ItemCount("Scroll") < GetScrollsCount())
                     {
