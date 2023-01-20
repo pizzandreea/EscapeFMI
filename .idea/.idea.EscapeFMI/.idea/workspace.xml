@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EscapeFMI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EscapeFMI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor 0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor 0.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Floor 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Floor 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Door.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
