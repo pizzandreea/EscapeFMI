@@ -8,10 +8,9 @@ namespace UI
     public class GameOverScreenManager : MonoBehaviour
     {
         [SerializeField] private GameObject gameOverScreen;
-
         private bool _lastHandledGameOverState;
 
-        private void Update()
+        private void LateUpdate()
         {
             if (GameManager.Instance.isGameOver != _lastHandledGameOverState)
             {
@@ -21,14 +20,13 @@ namespace UI
             {
                 HandleRestartKey();
             }
-            
-            _lastHandledGameOverState = GameManager.Instance.isGameOver;
         }
 
         private void HandleRestartKey()
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
+                _lastHandledGameOverState = GameManager.Instance.isGameOver;
                 GameManager.Instance.Restart();
             }
         }

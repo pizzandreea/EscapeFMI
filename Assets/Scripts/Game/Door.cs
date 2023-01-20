@@ -35,10 +35,25 @@ namespace Game
                     spriteRenderer.sprite = doorOpenSprite;
    
                     _inventory.UseItem("Key");
+                    gameObject.layer = 7;
 
-                    if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") == 1)
+                    if (goToNextLevel && (GameManager.Instance.inventory.ItemCount("Key") >= 1 || SceneManager.GetActiveScene().name != "Floor 0"))
                     {
-                        Invoke(nameof(GoToNextLevel), 1.0f);
+                        if (GameManager.Instance.inventory.ItemCount("Scroll") < GetScrollsCount())
+                        {
+                            if (GameManager.Instance.inventory.ItemCount("Key") >= 1)
+                            {
+                                StartCoroutine(SendNotification("You should take the scroll before moving to the next level", 3));
+                            }
+                            else
+                            {
+                                Player.HandleDeath();
+                            }
+                        }
+                        else 
+                        {
+                            Invoke(nameof(GoToNextLevel), 1.0f);
+                        }
                     }
                     else if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") < 1)
                     {
@@ -68,9 +83,16 @@ namespace Game
             }
             else if (doorOpen)
             {
-                if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") == 1)
+                if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") >= 1)
                 {
-                    Invoke(nameof(GoToNextLevel), 1.0f);
+                    if (GameManager.Instance.inventory.ItemCount("Scroll") < GetScrollsCount())
+                    {
+                        StartCoroutine(SendNotification("You should take the scroll before moving to the next level", 3));
+                    }
+                    else 
+                    {
+                        Invoke(nameof(GoToNextLevel), 1.0f);
+                    }
                 }
                 else if (goToNextLevel && GameManager.Instance.inventory.ItemCount("Key") < 1)
                 {
@@ -89,6 +111,22 @@ namespace Game
         private void GoToNextLevel()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        private int GetScrollsCount()
+        {
+            var scrollsCount = 1;
+                    
+            if (SceneManager.GetActiveScene().name == "Floor 1")
+            {
+                scrollsCount = 2;
+            } 
+            else if (SceneManager.GetActiveScene().name == "Floor 2")
+            {
+                scrollsCount = 3;
+            }
+            
+            return scrollsCount;
         }
     }
 }

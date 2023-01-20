@@ -130,7 +130,7 @@ namespace Game
             }
         }
 
-        private void HandleDeath()
+        public static void HandleDeath()
         {
             GameManager.Instance.isGameOver = true;
         }
