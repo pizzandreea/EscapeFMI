@@ -5,7 +5,7 @@ namespace Game
     public class Floating : MonoBehaviour
     {
         private const float Speed = 2.5f;
-        private const float Range = 0.00007f;
+        public static float Range = 0.00007f;
 
         public void Update()
         {
