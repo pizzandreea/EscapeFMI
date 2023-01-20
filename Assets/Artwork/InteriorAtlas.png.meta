@@ -4136,7 +4136,7 @@ TextureImporter:
         width: 128
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4144,6 +4144,153 @@ TextureImporter:
       bones: []
       spriteID: ac747d63c42785748a95fcab8b613e6c
       internalID: -46213570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brick
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 576
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99add4c447bcea94dbb86d4d90fe47ff
+      internalID: -1047357367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrickWall1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 928
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad513b8b1fdd6f44a3215d1d3a559f9
+      internalID: -1220936693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrickWall2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 928
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4b0fed44e433649a0efe26bc6cd643
+      internalID: -188710672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrickWall3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 928
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c7f29bac604ea49a01b09cc632889f
+      internalID: 830938117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9b52cd165c9c843b9f1863176b7655
+      internalID: -790531137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant2
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 832
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741afa2df8ba7024c95566a0b6a5d37f
+      internalID: 2138767187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vine
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 176
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aade1d27e603ec744b663bb7d8cb75ad
+      internalID: -1438259899
       vertices: []
       indices: 
       edges: []
@@ -4210,6 +4357,7 @@ TextureImporter:
       Board2: -643799454
       WallShort6: 1828125121
       Desk4: -1440858555
+      Plant1: -790531137
       WindowDark2: 483812116
       Floor9: 1275555309
       DoorOpen2: 1237410374
@@ -4277,6 +4425,7 @@ TextureImporter:
       GreyWall11: -1282687707
       WoodBroken1: 768016500
       WallB9: -1853433764
+      Vine: -1438259899
       Floor20: -1373268929
       WallHall5: 2039629555
       WallHall2: 427043961
@@ -4288,6 +4437,7 @@ TextureImporter:
       WallShort3: -978813491
       Floor18: 1276001007
       Rug15: 2075289581
+      Brick: -1047357367
       YellowWall03: 466156196
       GreyWall7: 1493180422
       Floor16: 1355785220
@@ -4297,16 +4447,19 @@ TextureImporter:
       GreyWall9: -830999312
       Chimney1: -1386084923
       WallHallOld2: -2144965861
+      BrickWall1: -1220936693
       Floor8: -1729476418
-      Bookshelf5: -1431014303
       GreyWall10: -1870205002
       Rug06: 1386388270
       WallB6: -1806223150
       WallB4: -820582121
       Bookshelf2: 1409013843
       WallB1: 1000728880
+      Bookshelf5: -1431014303
+      BrickWall3: 830938117
       Shadow1: 75374103
       FloorBorder2: -2112090309
+      Plant2: 2138767187
       Board8: 696522746
       Rug08: 1649265265
       WallB8: 1525877043
@@ -4314,6 +4467,7 @@ TextureImporter:
       YellowWall07: -1312153611
       Rug19: 804349213
       WindowLight1: 838999112
+      BrickWall2: -188710672
       WallHallOld1: -851783485
       WallShort5: 1008729449
       Floor21: -130383452
