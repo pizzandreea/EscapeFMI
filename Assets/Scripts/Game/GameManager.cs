@@ -25,7 +25,7 @@ namespace Game
 
             Instance = this;
             inventory = GetComponent<Inventory>();
-            soundManager = GetComponent<SoundManager>();
+            soundManager = GetComponent<SoundManager>();          
             DontDestroyOnLoad(gameObject);
         }
 
