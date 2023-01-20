@@ -41,7 +41,14 @@ namespace Game
                     {
                         if (GameManager.Instance.inventory.ItemCount("Scroll") < GetScrollsCount())
                         {
-                            StartCoroutine(SendNotification("You should take the scroll before moving to the next level", 3));
+                            if (GameManager.Instance.inventory.ItemCount("Key") == 1)
+                            {
+                                StartCoroutine(SendNotification("You should take the scroll before moving to the next level", 3));
+                            }
+                            else
+                            {
+                                Player.HandleDeath();
+                            }
                         }
                         else 
                         {
